@@ -12,7 +12,7 @@ rounding, infinity propagation and both quiet/signaling NaNs.
 ## On Apporto
 
 1. Run make sim for VCS tests and VCD dumps, or make fsdb for FSDB dumps.
-2. With the installed Verdi PLI directory configured, make fsdb produces
+2. With VERDI_HOME set by the course environment, make fsdb produces
    build/fp8_adder.fsdb and build/fp8_multiplier.fsdb.
 3. Run make verdi-adder and make verdi-multiplier.
 4. Add the top testbench's case_id, a, b, result, flags, expected_result,

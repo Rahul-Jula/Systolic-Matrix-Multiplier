@@ -5,7 +5,6 @@ VVP ?= vvp
 PYTHON ?= python3
 RTL := rtl/fp8_round_pack.sv rtl/fp8_adder.sv rtl/fp8_multiplier.sv
 VCS_FLAGS ?= -full64 -sverilog -timescale=1ns/1ps -debug_access+all -kdb
-FSDB_PLI_DIR ?= $(VERDI_HOME)/share/PLI/VCS/LINUX64
 
 .PHONY: all sim sim-adder sim-multiplier vectors exhaustive sim-iverilog exhaustive-iverilog fsdb verdi-adder verdi-multiplier package clean help
 all: sim
@@ -41,20 +40,24 @@ exhaustive-iverilog: vectors
 	$(IVERILOG) -g2012 -s tb_fp8_exhaustive -o build/exhaustive.vvp $(RTL) tb/tb_fp8_exhaustive.sv
 	$(VVP) build/exhaustive.vvp
 
-# Optional FSDB flow for Apporto/Verdi. The PLI path can be overridden.
+# Verdi 2024.09+: VCS loads the FSDB integration through VERDI_HOME.
+# Do not add legacy -P novas.tab/pli.a options to this flow.
 fsdb: | build
-	@test -f "$(FSDB_PLI_DIR)/novas.tab" -a -f "$(FSDB_PLI_DIR)/pli.a" || { echo "Set VERDI_HOME or FSDB_PLI_DIR to the installed Verdi VCS/LINUX64 PLI directory. make sim works without this."; exit 1; }
-	$(VCS) $(VCS_FLAGS) +define+FSDB -P "$(FSDB_PLI_DIR)/novas.tab" "$(FSDB_PLI_DIR)/pli.a" $(RTL) tb/tb_fp8_adder.sv -top tb_fp8_adder -Mdir=build/csrc_adder_fsdb -o build/simv_adder_fsdb -l build/adder_fsdb_compile.log
-	./build/simv_adder_fsdb -l build/adder_fsdb.log
-	$(VCS) $(VCS_FLAGS) +define+FSDB -P "$(FSDB_PLI_DIR)/novas.tab" "$(FSDB_PLI_DIR)/pli.a" $(RTL) tb/tb_fp8_multiplier.sv -top tb_fp8_multiplier -Mdir=build/csrc_multiplier_fsdb -o build/simv_multiplier_fsdb -l build/multiplier_fsdb_compile.log
-	./build/simv_multiplier_fsdb -l build/multiplier_fsdb.log
+	@test -n "$(VERDI_HOME)" && test -d "$(VERDI_HOME)" || { echo "Load the course environment so VERDI_HOME points to the Verdi installation."; exit 1; }
+	rm -f build/fp8_adder.fsdb build/fp8_multiplier.fsdb
+	$(VCS) $(VCS_FLAGS) -debug_access+all +define+FSDB $(RTL) tb/tb_fp8_adder.sv -top tb_fp8_adder -Mdir=build/csrc_adder_fsdb_modern -o build/simv_adder_fsdb_modern -l build/adder_fsdb_compile.log
+	./build/simv_adder_fsdb_modern -l build/adder_fsdb.log
+	@test -s build/fp8_adder.fsdb || { echo "Adder FSDB was not generated; inspect build/adder_fsdb.log."; exit 1; }
+	$(VCS) $(VCS_FLAGS) -debug_access+all +define+FSDB $(RTL) tb/tb_fp8_multiplier.sv -top tb_fp8_multiplier -Mdir=build/csrc_multiplier_fsdb_modern -o build/simv_multiplier_fsdb_modern -l build/multiplier_fsdb_compile.log
+	./build/simv_multiplier_fsdb_modern -l build/multiplier_fsdb.log
+	@test -s build/fp8_multiplier.fsdb || { echo "Multiplier FSDB was not generated; inspect build/multiplier_fsdb.log."; exit 1; }
 
 verdi-adder:
-	@test -f build/fp8_adder.fsdb || { echo "Run make fsdb first."; exit 1; }
+	@test -s build/fp8_adder.fsdb || { echo "Run make fsdb first."; exit 1; }
 	verdi -sv $(RTL) tb/tb_fp8_adder.sv -top tb_fp8_adder -ssf build/fp8_adder.fsdb &
 
 verdi-multiplier:
-	@test -f build/fp8_multiplier.fsdb || { echo "Run make fsdb first."; exit 1; }
+	@test -s build/fp8_multiplier.fsdb || { echo "Run make fsdb first."; exit 1; }
 	verdi -sv $(RTL) tb/tb_fp8_multiplier.sv -top tb_fp8_multiplier -ssf build/fp8_multiplier.fsdb &
 
 package: | build

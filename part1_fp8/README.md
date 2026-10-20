@@ -39,10 +39,11 @@ For FSDB and Verdi, first ensure VERDI_HOME points at the installed Verdi:
     make verdi-adder
     make verdi-multiplier
 
-The FSDB flow checks for novas.tab and pli.a under
-$(VERDI_HOME)/share/PLI/VCS/LINUX64. If your installation differs, override
-FSDB_PLI_DIR on the make command. The default make sim needs no FSDB plugin
-and always writes VCD dumps.
+The FSDB flow targets the installed Verdi 2024.09: VCS uses VERDI_HOME and
+-debug_access+all to load its integration automatically. Do not add legacy
+-P novas.tab/pli.a options; this Verdi version rejects them. The target checks
+that both nonempty FSDB files were produced. The default make sim writes VCD
+dumps instead.
 
 For native Icarus Verilog (2012 SystemVerilog):
 

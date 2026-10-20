@@ -32,12 +32,18 @@ Icarus prints nonfatal notices about constant bit selects in always_comb:
 it broadens the sensitivity to the complete vector. Compilation and all tests
 complete successfully. The source retains SystemVerilog always_comb.
 
-VCS/Verdi commands and optional FSDB PLI integration are supplied for Apporto.
-They have NOT been run on the user's live Apporto session in this change.
-No claim is made that VCS, FSDB generation, synthesis, timing closure or
-physical delay has been independently verified here. Part I does not require
-synthesis. Run make sim and make exhaustive on Apporto as the course-tool
-confirmation; retain its terminal output and Verdi screenshots.
+User-provided Apporto terminal screenshots show VCS W-2024.09-SP2-3 passing
+18 directed multiplier cases and all 65,536 ADD plus 65,536 MUL exhaustive
+result-and-flag checks. These are user-run results, not an agent-run remote
+session. The supplied screenshots do not independently show the adder's
+directed summary.
+
+The initial FSDB target passed arithmetic checks but failed to dump because
+Verdi 2024.09 rejects the legacy -P novas.tab integration. The corrected target
+uses VERDI_HOME with -debug_access+all, fresh compilation directories, and
+nonempty-file checks. Its FSDB output still needs confirmation on Apporto.
+Retain the terminal results and Verdi screenshots. No synthesis, timing closure
+or physical delay has been verified here; Part I does not require synthesis.
 
 Generated VCD/FSDB, simulator executables, vector files and raw logs stay in
 ignored build/. They are not source-code deliverables.
