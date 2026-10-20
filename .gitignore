@@ -1,0 +1,14 @@
+simv
+simv_*
+*.daidir/
+csrc/
+*.fsdb
+*.vcd
+*.vpd
+ucli.key
+verdiLog/
+DVEfiles/
+novas*
+WORK/
+*.log
+default.svf
