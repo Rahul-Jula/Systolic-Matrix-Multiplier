@@ -1,0 +1,10 @@
+/build/
+/*.zip
+/*.vcd
+/*.fsdb
+/*.vpd
+/*.log
+/simv*
+/csrc/
+/*.daidir/
+/verdiLog/

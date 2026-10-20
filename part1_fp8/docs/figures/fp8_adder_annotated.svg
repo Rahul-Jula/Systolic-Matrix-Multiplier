@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="860" viewBox="0 0 1800 860">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#152c46}.mono{font-family:monospace}</style>
+<text x="40" y="45" font-size="30" font-weight="bold">Part I - FP8 adder: five annotated RTL test cases</text>
+<text x="40" y="76" font-size="18">Actual Icarus VCD events; e3m4, bias 3; hex data buses; no clock or pipeline inside the DUT.</text>
+<rect x="213.0" y="105" width="293.0" height="150" rx="8" fill="#e8f3fb" stroke="#457495"/>
+<text x="225.0" y="132" font-size="20" font-weight="bold">Case 1</text>
+<text x="225.0" y="159" font-size="17">positive normals: 1 + 1.5 =</text>
+<text x="225.0" y="183" font-size="17">2.5</text>
+<path d="M 359.5 255 L 359.5 282 l -5 -8 m 5 8 l 5 -8" fill="none" stroke="#457495" stroke-width="2"/>
+<rect x="522.0" y="105" width="293.0" height="150" rx="8" fill="#e8f3fb" stroke="#457495"/>
+<text x="534.0" y="132" font-size="20" font-weight="bold">Case 2</text>
+<text x="534.0" y="159" font-size="17">negative normals: -1.5 + -1 =</text>
+<text x="534.0" y="183" font-size="17">-2.5</text>
+<path d="M 668.5 255 L 668.5 282 l -5 -8 m 5 8 l 5 -8" fill="none" stroke="#457495" stroke-width="2"/>
+<rect x="831.0" y="105" width="293.0" height="150" rx="8" fill="#e8f3fb" stroke="#457495"/>
+<text x="843.0" y="132" font-size="20" font-weight="bold">Case 3</text>
+<text x="843.0" y="159" font-size="17">zero identity: +0 + 1.5 = 1.5</text>
+<path d="M 977.5 255 L 977.5 282 l -5 -8 m 5 8 l 5 -8" fill="none" stroke="#457495" stroke-width="2"/>
+<rect x="1140.0" y="105" width="293.0" height="150" rx="8" fill="#fef0dc" stroke="#457495"/>
+<text x="1152.0" y="132" font-size="20" font-weight="bold">Case 4</text>
+<text x="1152.0" y="159" font-size="17">overflow: 15.5 + 15.5 -&gt;</text>
+<text x="1152.0" y="183" font-size="17">+infinity</text>
+<path d="M 1286.5 255 L 1286.5 282 l -5 -8 m 5 8 l 5 -8" fill="none" stroke="#457495" stroke-width="2"/>
+<rect x="1449.0" y="105" width="293.0" height="150" rx="8" fill="#fef0dc" stroke="#457495"/>
+<text x="1461.0" y="132" font-size="20" font-weight="bold">Case 5</text>
+<text x="1461.0" y="159" font-size="17">invalid: +infinity + -infinity</text>
+<text x="1461.0" y="183" font-size="17">-&gt; quiet NaN</text>
+<path d="M 1595.5 255 L 1595.5 282 l -5 -8 m 5 8 l 5 -8" fill="none" stroke="#457495" stroke-width="2"/>
+<path d="M 205.0 300 V 690" stroke="#d4dde5" stroke-dasharray="5,5"/>
+<text x="205.0" y="292" text-anchor="middle" font-size="18">10 ns</text>
+<path d="M 514.0 300 V 690" stroke="#d4dde5" stroke-dasharray="5,5"/>
+<text x="514.0" y="292" text-anchor="middle" font-size="18">20 ns</text>
+<path d="M 823.0 300 V 690" stroke="#d4dde5" stroke-dasharray="5,5"/>
+<text x="823.0" y="292" text-anchor="middle" font-size="18">30 ns</text>
+<path d="M 1132.0 300 V 690" stroke="#d4dde5" stroke-dasharray="5,5"/>
+<text x="1132.0" y="292" text-anchor="middle" font-size="18">40 ns</text>
+<path d="M 1441.0 300 V 690" stroke="#d4dde5" stroke-dasharray="5,5"/>
+<text x="1441.0" y="292" text-anchor="middle" font-size="18">50 ns</text>
+<path d="M 1750.0 300 V 690" stroke="#d4dde5" stroke-dasharray="5,5"/>
+<text x="1750.0" y="292" text-anchor="middle" font-size="18">60 ns</text>
+<text x="35" y="352" font-size="22" font-weight="bold">case_id</text>
+<path d="M 205.0 345 L 205.0 327 H 507.0 L 514.0 345 L 507.0 363 H 205.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="359.5" y="352" text-anchor="middle" class="mono" font-size="23">1</text>
+<path d="M 514.0 345 L 521.0 327 H 816.0 L 823.0 345 L 816.0 363 H 521.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="668.5" y="352" text-anchor="middle" class="mono" font-size="23">2</text>
+<path d="M 823.0 345 L 830.0 327 H 1125.0 L 1132.0 345 L 1125.0 363 H 830.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="977.5" y="352" text-anchor="middle" class="mono" font-size="23">3</text>
+<path d="M 1132.0 345 L 1139.0 327 H 1434.0 L 1441.0 345 L 1434.0 363 H 1139.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1286.5" y="352" text-anchor="middle" class="mono" font-size="23">4</text>
+<path d="M 1441.0 345 L 1448.0 327 H 1750.0 L 1750.0 345 L 1750.0 363 H 1448.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1595.5" y="352" text-anchor="middle" class="mono" font-size="23">5</text>
+<text x="35" y="417" font-size="22" font-weight="bold">a</text>
+<path d="M 205.0 410 L 205.0 392 H 507.0 L 514.0 410 L 507.0 428 H 205.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="359.5" y="417" text-anchor="middle" class="mono" font-size="23">0x30</text>
+<path d="M 514.0 410 L 521.0 392 H 816.0 L 823.0 410 L 816.0 428 H 521.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="668.5" y="417" text-anchor="middle" class="mono" font-size="23">0xB8</text>
+<path d="M 823.0 410 L 830.0 392 H 1125.0 L 1132.0 410 L 1125.0 428 H 830.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="977.5" y="417" text-anchor="middle" class="mono" font-size="23">0x00</text>
+<path d="M 1132.0 410 L 1139.0 392 H 1434.0 L 1441.0 410 L 1434.0 428 H 1139.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1286.5" y="417" text-anchor="middle" class="mono" font-size="23">0x6F</text>
+<path d="M 1441.0 410 L 1448.0 392 H 1750.0 L 1750.0 410 L 1750.0 428 H 1448.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1595.5" y="417" text-anchor="middle" class="mono" font-size="23">0x70</text>
+<text x="35" y="482" font-size="22" font-weight="bold">b</text>
+<path d="M 205.0 475 L 205.0 457 H 507.0 L 514.0 475 L 507.0 493 H 205.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="359.5" y="482" text-anchor="middle" class="mono" font-size="23">0x38</text>
+<path d="M 514.0 475 L 521.0 457 H 816.0 L 823.0 475 L 816.0 493 H 521.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="668.5" y="482" text-anchor="middle" class="mono" font-size="23">0xB0</text>
+<path d="M 823.0 475 L 830.0 457 H 1125.0 L 1132.0 475 L 1125.0 493 H 830.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="977.5" y="482" text-anchor="middle" class="mono" font-size="23">0x38</text>
+<path d="M 1132.0 475 L 1139.0 457 H 1434.0 L 1441.0 475 L 1434.0 493 H 1139.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1286.5" y="482" text-anchor="middle" class="mono" font-size="23">0x6F</text>
+<path d="M 1441.0 475 L 1448.0 457 H 1750.0 L 1750.0 475 L 1750.0 493 H 1448.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1595.5" y="482" text-anchor="middle" class="mono" font-size="23">0xF0</text>
+<text x="35" y="547" font-size="22" font-weight="bold">result</text>
+<path d="M 205.0 540 L 205.0 522 H 507.0 L 514.0 540 L 507.0 558 H 205.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="359.5" y="547" text-anchor="middle" class="mono" font-size="23">0x44</text>
+<path d="M 514.0 540 L 521.0 522 H 816.0 L 823.0 540 L 816.0 558 H 521.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="668.5" y="547" text-anchor="middle" class="mono" font-size="23">0xC4</text>
+<path d="M 823.0 540 L 830.0 522 H 1125.0 L 1132.0 540 L 1125.0 558 H 830.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="977.5" y="547" text-anchor="middle" class="mono" font-size="23">0x38</text>
+<path d="M 1132.0 540 L 1139.0 522 H 1434.0 L 1441.0 540 L 1434.0 558 H 1139.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1286.5" y="547" text-anchor="middle" class="mono" font-size="23">0x70</text>
+<path d="M 1441.0 540 L 1448.0 522 H 1750.0 L 1750.0 540 L 1750.0 558 H 1448.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1595.5" y="547" text-anchor="middle" class="mono" font-size="23">0x78</text>
+<text x="35" y="612" font-size="22" font-weight="bold">flags</text>
+<path d="M 205.0 605 L 205.0 587 H 1125.0 L 1132.0 605 L 1125.0 623 H 205.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="668.5" y="612" text-anchor="middle" class="mono" font-size="23">00000</text>
+<path d="M 1132.0 605 L 1139.0 587 H 1434.0 L 1441.0 605 L 1434.0 623 H 1139.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1286.5" y="612" text-anchor="middle" class="mono" font-size="23">10001</text>
+<path d="M 1441.0 605 L 1448.0 587 H 1750.0 L 1750.0 605 L 1750.0 623 H 1448.0 Z" fill="#f4f8fb" stroke="#286789" stroke-width="2"/>
+<text x="1595.5" y="612" text-anchor="middle" class="mono" font-size="23">00010</text>
+<text x="40" y="714" font-size="20" font-weight="bold">Flags [4:0] = overflow | underflow | divide-by-zero | invalid | inexact</text>
+<text x="40" y="752" font-size="19">Cases 1-3: exact normal/zero results, flags=00000. Case 4: overflow to infinity, flags=10001.</text>
+<text x="40" y="784" font-size="19">Case 5: invalid operation returns canonical quiet NaN 0x78, flags=00010.</text>
+<text x="40" y="820" font-size="17">Bus transitions are zero-delay RTL events. Reported times are stimulus intervals, not measured hardware delays.</text>
+</svg>

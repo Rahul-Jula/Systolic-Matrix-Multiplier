@@ -12,3 +12,7 @@ novas*
 WORK/
 *.log
 default.svf
+*.swp
+*.swo
+__pycache__/
+*.pyc
