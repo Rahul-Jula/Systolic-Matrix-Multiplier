@@ -1,0 +1,41 @@
+ 
+****************************************
+check_design summary:
+Version:     V-2023.12-SP5-1
+Date:        Wed Oct 21 17:30:48 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      5
+    Unconnected ports (LINT-28)                                     5
+
+Cells                                                              15
+    Cells do not drive (LINT-1)                                    15
+
+Nets                                                                1
+    Unloaded nets (LINT-2)                                          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'matmul_4x4_systolic', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'matmul_4x4_systolic', cell 'C224' does not drive any nets. (LINT-1)
+Warning: In design 'matmul_4x4_systolic', cell 'C228' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'B_6' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'C453' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'C463' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'B_9' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'C561' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'C567' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'B_1' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'C417' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'C421' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'C425' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'C429' does not drive any nets. (LINT-1)
+Warning: In design 'seq_mac', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'matmul_4x4_systolic', net 'row_latch_en' driven by pin 'u_output_logic/row_latch_en' has no loads. (LINT-2)
+Warning: In design 'systolic_data_setup', port 'a_loc[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'systolic_data_setup', port 'a_loc[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'systolic_data_setup', port 'b_loc[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'systolic_data_setup', port 'b_loc[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'systolic_pe_matrix', port 'start_mat_mul' is not connected to any nets. (LINT-28)
+1

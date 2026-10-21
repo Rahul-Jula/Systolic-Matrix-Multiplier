@@ -1,0 +1,15 @@
+ 
+****************************************
+check_design summary:
+Version:     V-2023.12-SP5-1
+Date:        Wed Oct 21 17:31:45 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Constant outputs (LINT-52)                                      1
+--------------------------------------------------------------------------------
+
+Warning: In design 'matmul_4x4_systolic', output port 'exception_flags[2]' is connected directly to 'logic 0'. (LINT-52)
+1

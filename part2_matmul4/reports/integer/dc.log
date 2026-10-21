@@ -1,0 +1,708 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version V-2023.12-SP5-1 for linux64 - Sep 03, 2024 
+
+                    Copyright (c) 1988 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Running PRESTO HDLC
+Compiling source file /home/a25953_asu/ADDV/LAB3/baseline/matmul.v
+Warning:  /home/a25953_asu/ADDV/LAB3/baseline/matmul.v:264: the undeclared symbol 'row_latch_en' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+Loading db file '/usr/local2/cadence/NCSU/SRC/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+Loading db file '/usr/local2/synopsys/syn_2023.12-SP51/libraries/syn/gtech.db'
+Loading db file '/usr/local2/synopsys/syn_2023.12-SP51/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine matmul_4x4_systolic line 104 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  done_mat_mul_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     clk_cnt_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (matmul_4x4_systolic)
+Elaborated 1 design.
+Current design is now 'matmul_4x4_systolic'.
+Information: Building the design 'systolic_data_setup'. (HDL-193)
+
+Inferred memory devices in process
+	in routine systolic_data_setup line 548 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  a_mem_access_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     a_addr_reg      | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine systolic_data_setup line 565 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+| a_mem_access_counter_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine systolic_data_setup line 600 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| a3_data_delayed_3_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| a1_data_delayed_1_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| a2_data_delayed_1_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| a2_data_delayed_2_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| a3_data_delayed_1_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| a3_data_delayed_2_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine systolic_data_setup line 628 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  b_mem_access_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     b_addr_reg      | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine systolic_data_setup line 646 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+| b_mem_access_counter_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine systolic_data_setup line 682 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| b3_data_delayed_3_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| b1_data_delayed_1_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| b2_data_delayed_1_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| b2_data_delayed_2_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| b3_data_delayed_1_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+| b3_data_delayed_2_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+Presto compilation completed successfully. (systolic_data_setup)
+Information: Building the design 'output_logic'. (HDL-193)
+
+Inferred memory devices in process
+	in routine output_logic line 418 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|      c_data_out_3_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| start_capturing_c_data_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    c_data_available_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         c_addr_reg         | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+|       c_data_out_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        counter_reg         | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      c_data_out_1_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|      c_data_out_2_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+======================================================================================
+Presto compilation completed successfully. (output_logic)
+Information: Building the design 'systolic_pe_matrix'. (HDL-193)
+Presto compilation completed successfully. (systolic_pe_matrix)
+Information: Building the design 'processing_element'. (HDL-193)
+
+Inferred memory devices in process
+	in routine processing_element line 849 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      out_b_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      out_a_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (processing_element)
+Information: Building the design 'seq_mac'. (HDL-193)
+
+Inferred memory devices in process
+	in routine seq_mac line 878 in file
+		'/home/a25953_asu/ADDV/LAB3/baseline/matmul.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mult_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       out_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     a_flop_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     b_flop_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (seq_mac)
+Current design is 'matmul_4x4_systolic'.
+
+  Linking design 'matmul_4x4_systolic'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (6 designs)               /home/a25953_asu/ADDV/LAB3/part2_matmul4/build/dc_integer/matmul_4x4_systolic.db, etc
+  gscl45nm (library)          /usr/local2/cadence/NCSU/SRC/FreePDK45/osu_soc/lib/files/gscl45nm.db
+
+Loading db file '/usr/local2/synopsys/syn_2023.12-SP51/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing leakage power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | V-2023.12-DWBB_202312.5 |     *     |
+| Licensed DW Building Blocks        | V-2023.12-DWBB_202312.5 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 1820                                   |
+| Number of User Hierarchies                              | 35                                     |
+| Sequential Cell Count                                   | 1083                                   |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 170                                    |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 21 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 16 instances of design 'processing_element'. (OPT-1056)
+Information: Uniquified 16 instances of design 'seq_mac'. (OPT-1056)
+  Simplifying Design 'matmul_4x4_systolic'
+
+Loaded alib file './alib-52/gscl45nm.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy u_systolic_data_setup before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_output_logic before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe00 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe33 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe32 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe31 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe30 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe23 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe22 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe21 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe20 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe13 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe12 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe11 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe10 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe03 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe02 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe01 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe00/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe33/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe32/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe31/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe30/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe23/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe22/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe21/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe20/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe13/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe12/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe11/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe10/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe03/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe02/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_systolic_pe_matrix/pe01/u_mac before Pass 1 (OPT-776)
+Information: Ungrouping 35 of 36 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'matmul_4x4_systolic'
+Information: Added key list 'DesignWare' to design 'matmul_4x4_systolic'. (DDB-72)
+ Implement Synthetic for 'matmul_4x4_systolic'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/a_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_a_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/a_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_a_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/a_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_a_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/a_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_a_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/a_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_a_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/a_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_a_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/a_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_a_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/a_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_a_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe00/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe00/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe10/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe10/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe20/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe20/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe30/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe30/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe01/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe01/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe11/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe11/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe21/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe21/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe31/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe31/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe02/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe02/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe12/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe12/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe22/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe22/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe32/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe32/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/b_flop_reg[7]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_b_reg[7]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/b_flop_reg[6]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_b_reg[6]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/b_flop_reg[5]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_b_reg[5]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/b_flop_reg[4]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_b_reg[4]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/b_flop_reg[3]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_b_reg[3]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/b_flop_reg[2]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_b_reg[2]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/b_flop_reg[1]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_b_reg[1]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe03/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe03/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe13/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe13/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe23/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe23/out_b_reg[0]'. (OPT-1215)
+Information: In design 'matmul_4x4_systolic', the register 'u_systolic_pe_matrix/pe33/u_mac/b_flop_reg[0]' is removed because it is merged to 'u_systolic_pe_matrix/pe33/out_b_reg[0]'. (OPT-1215)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: There is no timing violation in design matmul_4x4_systolic. Delay-based auto_ungroup will not be performed. (OPT-780)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:07   18350.6      0.00       0.0    5283.5                           86347.5625
+    0:00:07   18334.6      0.00       0.0    5280.2                           86218.1250
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:07   18368.9      0.00       0.0    5280.2                           86483.2188
+    0:00:07   18368.9      0.00       0.0    5280.2                           86483.2188
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:08   17914.1      0.00       0.0    5198.8                           82672.6719
+    0:00:08   17914.1      0.00       0.0    5198.8                           82672.6719
+    0:00:08   17914.1      0.00       0.0    5198.8                           82672.6719
+    0:00:08   17914.1      0.00       0.0    5198.8                           82672.6719
+    0:00:08   17912.7      0.00       0.0    5196.5                           82668.8047
+    0:00:08   17912.7      0.00       0.0    5196.5                           82668.8047
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:08   17857.8      0.00       0.0    5196.5                           82600.8828
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:09   18922.6      0.00       0.0    3064.5                           90219.4531
+    0:00:09   18922.6      0.00       0.0    3064.5                           90219.4531
+    0:00:09   18922.6      0.00       0.0    3064.5                           90219.4531
+    0:00:09   18922.6      0.00       0.0    3064.5                           90219.4531
+    0:00:09   18922.6      0.00       0.0    3064.5                           90219.4531
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:09   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:10   18910.0      0.00       0.0    3065.5                           89978.0703
+    0:00:10   19110.8      0.00       0.0    2503.8                           91754.1250
+    0:00:10   19110.8      0.00       0.0    2503.8                           91754.1250
+    0:00:10   19110.8      0.00       0.0    2503.8                           91754.1250
+    0:00:10   19110.8      0.00       0.0    2503.8                           91754.1250
+    0:00:10   19110.8      0.00       0.0    2503.8                           91754.1250
+    0:00:10   19110.8      0.00       0.0    2503.8                           91754.1250
+Loading db file '/usr/local2/cadence/NCSU/SRC/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+Writing verilog file '/home/a25953_asu/ADDV/LAB3/part2_matmul4/build/dc_integer/mapped.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Writing ddc file 'mapped.ddc'.
+
+Memory usage for this session 168 Mbytes.
+Memory usage for this session including child processes 168 Mbytes.
+CPU usage for this session 13 seconds ( 0.00 hours ).
+Elapsed time for this session 18 seconds ( 0.00 hours ).
+
+Thank you...

@@ -1,0 +1,250 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : matmul_4x4_systolic
+Version: V-2023.12-SP5-1
+Date   : Wed Oct 21 17:31:00 2026
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: clk_cnt_reg[3]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: u_output_logic/c_addr_reg[2]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clk_cnt_reg[3]/CLK (DFFPOSX1)                       0.000000   0.000000 r
+  clk_cnt_reg[3]/Q (DFFPOSX1) <-                      0.104823   0.104823 f
+  U2412/Y (INVX1)                                     0.104256   0.209079 r
+  U2589/Y (MUX2X1)                                    0.051922   0.261001 f
+  U2590/Y (MUX2X1)                                    0.041981   0.302982 r
+  U2591/Y (AOI21X1)                                   0.020435   0.323416 f
+  U2592/Y (NAND2X1)                                   0.014538   0.337955 r
+  U2610/Y (NOR2X1)                                    0.020073   0.358027 f
+  U2611/Y (OAI21X1)                                   0.016252   0.374280 r
+  U2612/Y (AOI21X1)                                   0.018981   0.393260 f
+  U1988/Y (BUFX2)                                     0.040905   0.434166 f
+  U2646/Y (AND2X1)                                    0.045338   0.479504 f
+  U2647/Y (INVX1)                                     0.375537   0.855041 r
+  U2650/Y (AND2X1)                                    0.204012   1.059053 r
+  U2397/Y (AND2X1)                                    0.014198   1.073252 r
+  U2398/Y (INVX1)                                     0.074218   1.147469 f
+  U2399/Y (OR2X1)                                     0.059506   1.206975 f
+  U2655/Y (INVX1)                                     0.757350   1.964326 r
+  U2682/Y (MUX2X1)                                    0.184613   2.148939 f
+  U2683/Y (INVX1)                                     0.073618   2.222557 r
+  u_output_logic/c_addr_reg[2]/D (DFFPOSX1)           0.000000   2.222557 r
+  data arrival time                                              2.222557
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  u_output_logic/c_addr_reg[2]/CLK (DFFPOSX1)         0.000000   9.900000 r
+  library setup time                                  -1.396573  8.503427
+  data required time                                             8.503427
+  --------------------------------------------------------------------------
+  data required time                                             8.503427
+  data arrival time                                              -2.222557
+  --------------------------------------------------------------------------
+  slack (MET)                                                    6.280869
+
+
+  Startpoint: clk_cnt_reg[3]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: u_output_logic/c_addr_reg[0]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clk_cnt_reg[3]/CLK (DFFPOSX1)                       0.000000   0.000000 r
+  clk_cnt_reg[3]/Q (DFFPOSX1) <-                      0.104823   0.104823 f
+  U2412/Y (INVX1)                                     0.104256   0.209079 r
+  U2589/Y (MUX2X1)                                    0.051922   0.261001 f
+  U2590/Y (MUX2X1)                                    0.041981   0.302982 r
+  U2591/Y (AOI21X1)                                   0.020435   0.323416 f
+  U2592/Y (NAND2X1)                                   0.014538   0.337955 r
+  U2610/Y (NOR2X1)                                    0.020073   0.358027 f
+  U2611/Y (OAI21X1)                                   0.016252   0.374280 r
+  U2612/Y (AOI21X1)                                   0.018981   0.393260 f
+  U1988/Y (BUFX2)                                     0.040905   0.434166 f
+  U2646/Y (AND2X1)                                    0.045338   0.479504 f
+  U2647/Y (INVX1)                                     0.375537   0.855041 r
+  U2650/Y (AND2X1)                                    0.204012   1.059053 r
+  U2397/Y (AND2X1)                                    0.014198   1.073252 r
+  U2398/Y (INVX1)                                     0.074218   1.147469 f
+  U2399/Y (OR2X1)                                     0.059506   1.206975 f
+  U2655/Y (INVX1)                                     0.757350   1.964326 r
+  U2692/Y (MUX2X1)                                    0.184613   2.148939 f
+  U2693/Y (INVX1)                                     0.073618   2.222557 r
+  u_output_logic/c_addr_reg[0]/D (DFFPOSX1)           0.000000   2.222557 r
+  data arrival time                                              2.222557
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  u_output_logic/c_addr_reg[0]/CLK (DFFPOSX1)         0.000000   9.900000 r
+  library setup time                                  -1.396573  8.503427
+  data required time                                             8.503427
+  --------------------------------------------------------------------------
+  data required time                                             8.503427
+  data arrival time                                              -2.222557
+  --------------------------------------------------------------------------
+  slack (MET)                                                    6.280869
+
+
+  Startpoint: clk_cnt_reg[3]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: u_output_logic/c_addr_reg[1]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clk_cnt_reg[3]/CLK (DFFPOSX1)                       0.000000   0.000000 r
+  clk_cnt_reg[3]/Q (DFFPOSX1) <-                      0.104823   0.104823 f
+  U2412/Y (INVX1)                                     0.104256   0.209079 r
+  U2589/Y (MUX2X1)                                    0.051922   0.261001 f
+  U2590/Y (MUX2X1)                                    0.041981   0.302982 r
+  U2591/Y (AOI21X1)                                   0.020435   0.323416 f
+  U2592/Y (NAND2X1)                                   0.014538   0.337955 r
+  U2610/Y (NOR2X1)                                    0.020073   0.358027 f
+  U2611/Y (OAI21X1)                                   0.016252   0.374280 r
+  U2612/Y (AOI21X1)                                   0.018981   0.393260 f
+  U1988/Y (BUFX2)                                     0.040905   0.434166 f
+  U2646/Y (AND2X1)                                    0.045338   0.479504 f
+  U2647/Y (INVX1)                                     0.375537   0.855041 r
+  U2650/Y (AND2X1)                                    0.204012   1.059053 r
+  U2397/Y (AND2X1)                                    0.014198   1.073252 r
+  U2398/Y (INVX1)                                     0.074218   1.147469 f
+  U2399/Y (OR2X1)                                     0.059506   1.206975 f
+  U2655/Y (INVX1)                                     0.757350   1.964326 r
+  U2686/Y (MUX2X1)                                    0.184613   2.148939 f
+  U2687/Y (INVX1)                                     0.073618   2.222557 r
+  u_output_logic/c_addr_reg[1]/D (DFFPOSX1)           0.000000   2.222557 r
+  data arrival time                                              2.222557
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  u_output_logic/c_addr_reg[1]/CLK (DFFPOSX1)         0.000000   9.900000 r
+  library setup time                                  -1.396573  8.503427
+  data required time                                             8.503427
+  --------------------------------------------------------------------------
+  data required time                                             8.503427
+  data arrival time                                              -2.222557
+  --------------------------------------------------------------------------
+  slack (MET)                                                    6.280869
+
+
+  Startpoint: clk_cnt_reg[3]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: u_output_logic/c_addr_reg[3]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clk_cnt_reg[3]/CLK (DFFPOSX1)                       0.000000   0.000000 r
+  clk_cnt_reg[3]/Q (DFFPOSX1) <-                      0.104823   0.104823 f
+  U2412/Y (INVX1)                                     0.104256   0.209079 r
+  U2589/Y (MUX2X1)                                    0.051922   0.261001 f
+  U2590/Y (MUX2X1)                                    0.041981   0.302982 r
+  U2591/Y (AOI21X1)                                   0.020435   0.323416 f
+  U2592/Y (NAND2X1)                                   0.014538   0.337955 r
+  U2610/Y (NOR2X1)                                    0.020073   0.358027 f
+  U2611/Y (OAI21X1)                                   0.016252   0.374280 r
+  U2612/Y (AOI21X1)                                   0.018981   0.393260 f
+  U1988/Y (BUFX2)                                     0.040905   0.434166 f
+  U2646/Y (AND2X1)                                    0.045338   0.479504 f
+  U2647/Y (INVX1)                                     0.375537   0.855041 r
+  U2650/Y (AND2X1)                                    0.204012   1.059053 r
+  U2397/Y (AND2X1)                                    0.014198   1.073252 r
+  U2398/Y (INVX1)                                     0.074218   1.147469 f
+  U2399/Y (OR2X1)                                     0.059506   1.206975 f
+  U2655/Y (INVX1)                                     0.757350   1.964326 r
+  U2678/Y (MUX2X1)                                    0.184613   2.148939 f
+  U2679/Y (INVX1)                                     0.073618   2.222557 r
+  u_output_logic/c_addr_reg[3]/D (DFFPOSX1)           0.000000   2.222557 r
+  data arrival time                                              2.222557
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  u_output_logic/c_addr_reg[3]/CLK (DFFPOSX1)         0.000000   9.900000 r
+  library setup time                                  -1.396573  8.503427
+  data required time                                             8.503427
+  --------------------------------------------------------------------------
+  data required time                                             8.503427
+  data arrival time                                              -2.222557
+  --------------------------------------------------------------------------
+  slack (MET)                                                    6.280869
+
+
+  Startpoint: clk_cnt_reg[3]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: u_output_logic/c_addr_reg[4]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  clk_cnt_reg[3]/CLK (DFFPOSX1)                       0.000000   0.000000 r
+  clk_cnt_reg[3]/Q (DFFPOSX1) <-                      0.104823   0.104823 f
+  U2412/Y (INVX1)                                     0.104256   0.209079 r
+  U2589/Y (MUX2X1)                                    0.051922   0.261001 f
+  U2590/Y (MUX2X1)                                    0.041981   0.302982 r
+  U2591/Y (AOI21X1)                                   0.020435   0.323416 f
+  U2592/Y (NAND2X1)                                   0.014538   0.337955 r
+  U2610/Y (NOR2X1)                                    0.020073   0.358027 f
+  U2611/Y (OAI21X1)                                   0.016252   0.374280 r
+  U2612/Y (AOI21X1)                                   0.018981   0.393260 f
+  U1988/Y (BUFX2)                                     0.040905   0.434166 f
+  U2646/Y (AND2X1)                                    0.045338   0.479504 f
+  U2647/Y (INVX1)                                     0.375537   0.855041 r
+  U2650/Y (AND2X1)                                    0.204012   1.059053 r
+  U2397/Y (AND2X1)                                    0.014198   1.073252 r
+  U2398/Y (INVX1)                                     0.074218   1.147469 f
+  U2399/Y (OR2X1)                                     0.059506   1.206975 f
+  U2655/Y (INVX1)                                     0.757350   1.964326 r
+  U2674/Y (MUX2X1)                                    0.184613   2.148939 f
+  U2675/Y (INVX1)                                     0.073618   2.222557 r
+  u_output_logic/c_addr_reg[4]/D (DFFPOSX1)           0.000000   2.222557 r
+  data arrival time                                              2.222557
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  u_output_logic/c_addr_reg[4]/CLK (DFFPOSX1)         0.000000   9.900000 r
+  library setup time                                  -1.396573  8.503427
+  data required time                                             8.503427
+  --------------------------------------------------------------------------
+  data required time                                             8.503427
+  data arrival time                                              -2.222557
+  --------------------------------------------------------------------------
+  slack (MET)                                                    6.280869
+
+
+1

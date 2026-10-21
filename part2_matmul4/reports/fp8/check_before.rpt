@@ -1,0 +1,74 @@
+ 
+****************************************
+check_design summary:
+Version:     V-2023.12-SP5-1
+Date:        Wed Oct 21 17:31:07 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      9
+    Unconnected ports (LINT-28)                                     5
+    Feedthrough (LINT-29)                                           1
+    Shorted outputs (LINT-31)                                       1
+    Constant outputs (LINT-52)                                      2
+
+Cells                                                              35
+    Cells do not drive (LINT-1)                                    31
+    Connected to power or ground (LINT-32)                          3
+    Nets connected to multiple pins on same cell (LINT-33)          1
+
+Nets                                                                1
+    Unloaded nets (LINT-2)                                          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'matmul_4x4_systolic', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'matmul_4x4_systolic', cell 'C224' does not drive any nets. (LINT-1)
+Warning: In design 'matmul_4x4_systolic', cell 'C228' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'B_6' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'C453' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'C463' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'B_9' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'C561' does not drive any nets. (LINT-1)
+Warning: In design 'systolic_data_setup', cell 'C567' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'B_1' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'C417' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'C421' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'C425' does not drive any nets. (LINT-1)
+Warning: In design 'output_logic', cell 'C429' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_multiplier', cell 'C173' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'B_20' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'B_21' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'B_22' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1084' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1180' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1181' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1182' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1183' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1184' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1185' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1186' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1187' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1188' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1189' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_adder', cell 'C1190' does not drive any nets. (LINT-1)
+Warning: In design 'fp8_round_pack', cell 'C178' does not drive any nets. (LINT-1)
+Warning: In design 'matmul_4x4_systolic', net 'row_latch_en' driven by pin 'u_output_logic/row_latch_en' has no loads. (LINT-2)
+Warning: In design 'systolic_data_setup', port 'a_loc[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'systolic_data_setup', port 'a_loc[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'systolic_data_setup', port 'b_loc[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'systolic_data_setup', port 'b_loc[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'systolic_pe_matrix', port 'start_mat_mul' is not connected to any nets. (LINT-28)
+Warning: In design 'fp8_round_pack', input port 'sign' is connected directly to output port 'result[7]'. (LINT-29)
+Warning: In design 'fp8_round_pack', output port 'flags[2]' is connected directly to output port 'flags[1]'. (LINT-31)
+Warning: In design 'fp8_multiplier', a pin on submodule 'round_pack' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'significand[2]' is connected to logic 0. 
+Warning: In design 'fp8_multiplier', a pin on submodule 'round_pack' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'significand[1]' is connected to logic 0. 
+Warning: In design 'fp8_multiplier', a pin on submodule 'round_pack' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'significand[0]' is connected to logic 0. 
+Warning: In design 'fp8_multiplier', the same net is connected to more than one pin on submodule 'round_pack'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'significand[2]', 'significand[1]'', 'significand[0]'.
+Warning: In design 'fp8_round_pack', output port 'flags[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'fp8_round_pack', output port 'flags[1]' is connected directly to 'logic 0'. (LINT-52)
+1

@@ -1,0 +1,11 @@
+build/
+*.log
+!reports/*.log
+!reports/*/*.log
+*.fsdb
+*.vcd
+*.vpd
+*.key
+novas*
+verdiLog/
+__pycache__/

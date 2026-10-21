@@ -1,0 +1,47 @@
+Command: /home/a25953_asu/ADDV/LAB3/part2_matmul4/./build/simv_fsdb +CASE=2 -l reports/exception_sim.log
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2-3_Full64; Runtime version W-2024.09-SP2-3_Full64;  Oct 21 07:18 2026
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2-3, Linux x86_64/64bit, 06/23/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'build/exception.fsdb'
+*Verdi* : Begin traversing the scope (tb_part2), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+EVENT case=2 LOAD t=80 ns addr=0 A=3030b830 B=a0203820
+EVENT case=2 LOAD t=100 ns addr=1 A=a030a038 B=3020b0b8
+EVENT case=2 LOAD t=120 ns addr=2 A=b83020b8 B=a0b0b0a0
+EVENT case=2 LOAD t=140 ns addr=3 A=60a020b0 B=403038a0
+EVENT case=2 START t=200 ns
+EVENT case=2 C_WRITE t=550 ns addr=0 data=c0b4a0a0
+EVENT case=2 C_WRITE t=570 ns addr=1 data=6fb4b800
+EVENT case=2 C_WRITE t=590 ns addr=2 data=64a0b03c
+EVENT case=2 DONE t=590 ns flags=10001
+EVENT case=2 C_WRITE t=610 ns addr=3 data=70b03090
+CHECK case=2 C[0][0] actual=a0 expected=a0
+CHECK case=2 C[1][0] actual=a0 expected=a0
+CHECK case=2 C[2][0] actual=b4 expected=b4
+CHECK case=2 C[3][0] actual=c0 expected=c0
+CHECK case=2 C[0][1] actual=00 expected=00
+CHECK case=2 C[1][1] actual=b8 expected=b8
+CHECK case=2 C[2][1] actual=b4 expected=b4
+CHECK case=2 C[3][1] actual=6f expected=6f
+CHECK case=2 C[0][2] actual=3c expected=3c
+CHECK case=2 C[1][2] actual=b0 expected=b0
+CHECK case=2 C[2][2] actual=a0 expected=a0
+CHECK case=2 C[3][2] actual=64 expected=64
+CHECK case=2 C[0][3] actual=90 expected=90
+CHECK case=2 C[1][3] actual=30 expected=30
+CHECK case=2 C[2][3] actual=b0 expected=b0
+CHECK case=2 C[3][3] actual=70 expected=70
+PASS case=2 all 16 entries flags=10001 t=640 ns
+PART2 SIMULATION PASS
+$finish called from file "tb/tb_part2.sv", line 142.
+$finish at simulation time       720 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 720000 ps
+CPU Time:      0.150 seconds;       Data structure size:   0.1Mb
+Wed Oct 21 07:18:50 2026

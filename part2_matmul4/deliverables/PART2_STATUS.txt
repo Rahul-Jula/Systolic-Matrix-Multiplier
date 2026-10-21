@@ -1,0 +1,13 @@
+Part II completed locally. VCS clean, exception, and reset sequence pass. Both core synthesis runs complete. Report and source/evidence ZIPs validated.
+
+Final local files:
+output/Lab3_Part2_Source.zip
+output/Lab3_Part2_Evidence.zip
+Lab3/part2_matmul4/output/pdf/Lab3_Part2_Report.pdf
+
+Pending: final upload to Apporto. User has been asked to select tmp/part2_completed.zip in the open upload picker. Once uploaded, in existing Apporto terminal run:
+unzip -o ~/Desktop/part2_completed.zip -d ~/ADDV/LAB3
+Then verify:
+ls -lh ~/ADDV/LAB3/part2_matmul4/deliverables ~/ADDV/LAB3/part2_matmul4/output/pdf
+
+Original Part I and baseline remain unchanged. No GitHub push or LMS submission performed.
