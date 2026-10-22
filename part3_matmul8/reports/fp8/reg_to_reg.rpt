@@ -1,0 +1,463 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : matmul_8x8
+Version: V-2023.12-SP5-1
+Date   : Wed Oct 21 19:30:08 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: tile10/u_systolic_pe_matrix/pe00/u_mac/out_reg[1]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: tile10/u_systolic_pe_matrix/pe00/u_mac/exception_flags_reg[4]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  tile10/u_systolic_pe_matrix/pe00/u_mac/out_reg[1]/CLK (DFFPOSX1)
+                                                      0.000000 # 0.000000 r
+  tile10/u_systolic_pe_matrix/pe00/u_mac/out_reg[1]/Q (DFFPOSX1) <-
+                                                      0.113274   0.113274 f
+  U43239/Y (INVX1)                                    0.028277   0.141550 r
+  U43240/Y (AOI21X1)                                  0.025417   0.166967 f
+  U43241/Y (AOI22X1)                                  0.027261   0.194228 r
+  U34634/Y (BUFX2)                                    0.040309   0.234537 r
+  U34635/Y (OR2X1)                                    0.040763   0.275300 r
+  U43243/Y (AOI22X1)                                  0.020108   0.295407 f
+  U43244/Y (AOI22X1)                                  0.035634   0.331041 r
+  U43247/Y (OAI21X1)                                  0.025340   0.356381 f
+  U43249/Y (OAI21X1)                                  0.038743   0.395124 r
+  U43250/Y (NAND2X1)                                  0.021633   0.416757 f
+  U43251/Y (NAND2X1)                                  0.013212   0.429970 r
+  U43252/Y (BUFX2)                                    0.101840   0.531809 r
+  U43262/Y (AOI21X1)                                  0.047242   0.579051 f
+  U32839/Y (BUFX2)                                    0.042728   0.621780 f
+  U43263/Y (NAND2X1)                                  0.033567   0.655346 r
+  U43264/Y (MUX2X1)                                   0.069307   0.724653 f
+  U43277/Y (AOI21X1)                                  0.041147   0.765800 r
+  U36667/Y (BUFX2)                                    0.068016   0.833817 r
+  U43288/Y (INVX1)                                    0.044160   0.877977 f
+  U43297/Y (NOR2X1)                                   0.043801   0.921778 r
+  U43298/Y (XOR2X1)                                   0.042307   0.964085 f
+  U43299/Y (AND2X1)                                   0.059064   1.023149 f
+  U43300/Y (AND2X1)                                   0.055072   1.078221 f
+  U43301/Y (AND2X1)                                   0.055302   1.133523 f
+  U43302/Y (AND2X1)                                   0.055289   1.188812 f
+  U43303/Y (AND2X1)                                   0.055781   1.244592 f
+  DP_OP_2472J1_347_2059/U6/YC (FAX1)                  0.081594   1.326186 f
+  DP_OP_2472J1_347_2059/U5/YC (FAX1)                  0.081469   1.407655 f
+  DP_OP_2472J1_347_2059/U4/YC (FAX1)                  0.081469   1.489123 f
+  DP_OP_2472J1_347_2059/U3/YC (FAX1)                  0.081060   1.570184 f
+  U60490/Y (XNOR2X1)                                  0.130557   1.700740 r
+  U33233/Y (OR2X1)                                    0.061667   1.762407 r
+  U33234/Y (INVX1)                                    0.036772   1.799179 f
+  U36707/Y (AND2X1)                                   0.052865   1.852044 f
+  U36708/Y (INVX1)                                    0.076472   1.928515 r
+  U33249/Y (OR2X1)                                    0.113553   2.042068 r
+  U33250/Y (INVX1)                                    0.069479   2.111547 f
+  U60597/Y (MUX2X1)                                   0.045778   2.157326 r
+  U36855/Y (OR2X1)                                    0.048798   2.206124 r
+  U60598/Y (INVX1)                                    0.017535   2.223659 f
+  U60599/Y (NAND2X1)                                  0.012965   2.236624 r
+  U33699/Y (AND2X1)                                   0.047113   2.283737 r
+  U60600/Y (INVX1)                                    0.033502   2.317239 f
+  U60605/Y (NAND2X1)                                  0.039569   2.356808 r
+  U35281/Y (OR2X1)                                    0.049078   2.405887 r
+  U35282/Y (INVX1)                                    0.028028   2.433915 f
+  U60606/Y (NAND2X1)                                  0.032667   2.466582 r
+  U60607/Y (NOR2X1)                                   0.033947   2.500529 f
+  U60608/Y (OR2X1)                                    0.047023   2.547552 f
+  U60609/Y (NAND3X1)                                  0.050975   2.598526 r
+  U60643/Y (NOR2X1)                                   0.036458   2.634985 f
+  U60644/Y (NOR3X1)                                   0.038050   2.673035 r
+  U60645/Y (NOR2X1)                                   0.021260   2.694294 f
+  tile10/u_systolic_pe_matrix/pe00/u_mac/exception_flags_reg[4]/D (DFFPOSX1)
+                                                      0.000000   2.694294 f
+  data arrival time                                              2.694294
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  tile10/u_systolic_pe_matrix/pe00/u_mac/exception_flags_reg[4]/CLK (DFFPOSX1)
+                                                      0.000000   9.900000 r
+  library setup time                                  -1.368006  8.531994
+  data required time                                             8.531994
+  --------------------------------------------------------------------------
+  data required time                                             8.531994
+  data arrival time                                              -2.694294
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.837700
+
+
+  Startpoint: tile01/u_systolic_pe_matrix/pe01/u_mac/out_reg[1]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: tile01/u_systolic_pe_matrix/pe01/u_mac/exception_flags_reg[4]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  tile01/u_systolic_pe_matrix/pe01/u_mac/out_reg[1]/CLK (DFFPOSX1)
+                                                      0.000000 # 0.000000 r
+  tile01/u_systolic_pe_matrix/pe01/u_mac/out_reg[1]/Q (DFFPOSX1) <-
+                                                      0.113274   0.113274 f
+  U46597/Y (INVX1)                                    0.028277   0.141550 r
+  U46598/Y (AOI21X1)                                  0.025417   0.166967 f
+  U46599/Y (AOI22X1)                                  0.027261   0.194228 r
+  U34664/Y (BUFX2)                                    0.040309   0.234537 r
+  U34665/Y (OR2X1)                                    0.040763   0.275300 r
+  U46601/Y (AOI22X1)                                  0.020108   0.295407 f
+  U46602/Y (AOI22X1)                                  0.035634   0.331041 r
+  U46605/Y (OAI21X1)                                  0.025340   0.356381 f
+  U46607/Y (OAI21X1)                                  0.038743   0.395124 r
+  U46608/Y (NAND2X1)                                  0.021633   0.416757 f
+  U46609/Y (NAND2X1)                                  0.013212   0.429970 r
+  U46610/Y (BUFX2)                                    0.101840   0.531809 r
+  U46619/Y (NOR2X1)                                   0.040008   0.571817 f
+  U46620/Y (AOI21X1)                                  0.015144   0.586961 r
+  U32927/Y (BUFX2)                                    0.032851   0.619812 r
+  U32925/Y (INVX1)                                    0.013215   0.633027 f
+  U32926/Y (INVX1)                                    0.032762   0.665789 r
+  U46621/Y (NAND2X1)                                  0.018761   0.684550 f
+  U46622/Y (MUX2X1)                                   0.066133   0.750683 f
+  U46635/Y (AOI21X1)                                  0.041147   0.791831 r
+  U36682/Y (BUFX2)                                    0.068016   0.859847 r
+  U46646/Y (INVX1)                                    0.039460   0.899308 f
+  U46653/Y (NOR2X1)                                   0.042336   0.941643 r
+  U46654/Y (XOR2X1)                                   0.070752   1.012395 r
+  U46655/Y (AND2X1)                                   0.047126   1.059521 r
+  U46656/Y (AND2X1)                                   0.056343   1.115864 r
+  U46657/Y (AND2X1)                                   0.056422   1.172286 r
+  U46658/Y (AND2X1)                                   0.056409   1.228695 r
+  U46659/Y (AND2X1)                                   0.057893   1.286588 r
+  DP_OP_3072J1_392_4225/U6/YC (FAX1)                  0.074326   1.360914 r
+  DP_OP_3072J1_392_4225/U5/YC (FAX1)                  0.073510   1.434424 r
+  DP_OP_3072J1_392_4225/U4/YC (FAX1)                  0.073510   1.507934 r
+  DP_OP_3072J1_392_4225/U3/YC (FAX1)                  0.071059   1.578993 r
+  U63680/Y (XNOR2X1)                                  0.142327   1.721320 r
+  U33203/Y (OR2X1)                                    0.073076   1.794396 r
+  U33204/Y (INVX1)                                    0.039269   1.833666 f
+  U36553/Y (AND2X1)                                   0.066839   1.900504 f
+  U36554/Y (INVX1)                                    0.064639   1.965143 r
+  U63681/Y (NOR2X1)                                   0.024957   1.990100 f
+  U63682/Y (BUFX2)                                    0.049338   2.039437 f
+  U35766/Y (AND2X1)                                   0.056555   2.095992 f
+  U35767/Y (INVX1)                                    0.041010   2.137002 r
+  U63772/Y (NAND2X1)                                  0.023080   2.160082 f
+  U63796/Y (OAI21X1)                                  0.043767   2.203849 r
+  U36791/Y (OR2X1)                                    0.051162   2.255011 r
+  U34901/Y (AND2X1)                                   0.048293   2.303305 r
+  U63800/Y (AOI21X1)                                  0.030722   2.334027 f
+  U34900/Y (BUFX2)                                    0.038318   2.372345 f
+  U63801/Y (NAND2X1)                                  0.021058   2.393403 r
+  U63802/Y (NOR2X1)                                   0.032266   2.425669 f
+  U63803/Y (NAND2X1)                                  0.029983   2.455652 r
+  U63804/Y (NOR2X1)                                   0.034100   2.489751 f
+  U63805/Y (OR2X1)                                    0.047024   2.536776 f
+  U63806/Y (NAND3X1)                                  0.051004   2.587780 r
+  U63840/Y (NOR2X1)                                   0.036466   2.624246 f
+  U63841/Y (NOR3X1)                                   0.038050   2.662296 r
+  U63842/Y (NOR2X1)                                   0.021230   2.683526 f
+  tile01/u_systolic_pe_matrix/pe01/u_mac/exception_flags_reg[4]/D (DFFPOSX1)
+                                                      0.000000   2.683526 f
+  data arrival time                                              2.683526
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  tile01/u_systolic_pe_matrix/pe01/u_mac/exception_flags_reg[4]/CLK (DFFPOSX1)
+                                                      0.000000   9.900000 r
+  library setup time                                  -1.372669  8.527331
+  data required time                                             8.527331
+  --------------------------------------------------------------------------
+  data required time                                             8.527331
+  data arrival time                                              -2.683526
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.843805
+
+
+  Startpoint: tile11/u_systolic_pe_matrix/pe01/u_mac/out_reg[1]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: tile11/u_systolic_pe_matrix/pe01/u_mac/exception_flags_reg[4]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  tile11/u_systolic_pe_matrix/pe01/u_mac/out_reg[1]/CLK (DFFPOSX1)
+                                                      0.000000 # 0.000000 r
+  tile11/u_systolic_pe_matrix/pe01/u_mac/out_reg[1]/Q (DFFPOSX1) <-
+                                                      0.113274   0.113274 f
+  U46300/Y (INVX1)                                    0.028277   0.141550 r
+  U46301/Y (AOI21X1)                                  0.025417   0.166967 f
+  U46302/Y (AOI22X1)                                  0.027261   0.194228 r
+  U34600/Y (BUFX2)                                    0.040309   0.234537 r
+  U34601/Y (OR2X1)                                    0.040763   0.275300 r
+  U46304/Y (AOI22X1)                                  0.020108   0.295407 f
+  U46305/Y (AOI22X1)                                  0.035634   0.331041 r
+  U46308/Y (OAI21X1)                                  0.025340   0.356381 f
+  U46310/Y (OAI21X1)                                  0.038743   0.395124 r
+  U46311/Y (NAND2X1)                                  0.021633   0.416757 f
+  U46312/Y (NAND2X1)                                  0.013212   0.429970 r
+  U46313/Y (BUFX2)                                    0.101840   0.531809 r
+  U46322/Y (NOR2X1)                                   0.040008   0.571817 f
+  U46323/Y (AOI21X1)                                  0.015144   0.586961 r
+  U32915/Y (BUFX2)                                    0.032851   0.619812 r
+  U32913/Y (INVX1)                                    0.013215   0.633027 f
+  U32914/Y (INVX1)                                    0.032762   0.665789 r
+  U46324/Y (NAND2X1)                                  0.018761   0.684550 f
+  U46325/Y (MUX2X1)                                   0.066133   0.750683 f
+  U46338/Y (AOI21X1)                                  0.041147   0.791831 r
+  U36650/Y (BUFX2)                                    0.068016   0.859847 r
+  U46349/Y (INVX1)                                    0.039460   0.899308 f
+  U46356/Y (NOR2X1)                                   0.042336   0.941643 r
+  U46357/Y (XOR2X1)                                   0.070752   1.012395 r
+  U46358/Y (AND2X1)                                   0.047126   1.059521 r
+  U46359/Y (AND2X1)                                   0.056343   1.115864 r
+  U46360/Y (AND2X1)                                   0.056422   1.172286 r
+  U46361/Y (AND2X1)                                   0.056409   1.228695 r
+  U46362/Y (AND2X1)                                   0.057893   1.286588 r
+  DP_OP_1792J1_296_4475/U6/YC (FAX1)                  0.074326   1.360914 r
+  DP_OP_1792J1_296_4475/U5/YC (FAX1)                  0.073510   1.434424 r
+  DP_OP_1792J1_296_4475/U4/YC (FAX1)                  0.073510   1.507934 r
+  DP_OP_1792J1_296_4475/U3/YC (FAX1)                  0.071059   1.578993 r
+  U56780/Y (XNOR2X1)                                  0.142327   1.721320 r
+  U33010/Y (OR2X1)                                    0.056132   1.777453 r
+  U33011/Y (INVX1)                                    0.015657   1.793109 f
+  U33008/Y (INVX1)                                    -0.001572  1.791537 r
+  U33009/Y (INVX1)                                    0.031259   1.822796 f
+  U36497/Y (AND2X1)                                   0.067729   1.890525 f
+  U36498/Y (INVX1)                                    0.064496   1.955021 r
+  U56781/Y (NOR2X1)                                   0.024941   1.979962 f
+  U56782/Y (BUFX2)                                    0.049337   2.029300 f
+  U35689/Y (AND2X1)                                   0.056555   2.085855 f
+  U56855/Y (INVX1)                                    0.041010   2.126865 r
+  U56872/Y (NAND2X1)                                  0.023080   2.149945 f
+  U56896/Y (OAI21X1)                                  0.043767   2.193712 r
+  U36819/Y (OR2X1)                                    0.051161   2.244873 r
+  U34845/Y (AND2X1)                                   0.048293   2.293166 r
+  U56900/Y (AOI21X1)                                  0.030722   2.323888 f
+  U34844/Y (BUFX2)                                    0.038318   2.362207 f
+  U56901/Y (NAND2X1)                                  0.021058   2.383264 r
+  U56902/Y (NOR2X1)                                   0.032266   2.415530 f
+  U56903/Y (NAND2X1)                                  0.029983   2.445513 r
+  U56904/Y (NOR2X1)                                   0.034100   2.479613 f
+  U56905/Y (OR2X1)                                    0.047024   2.526637 f
+  U56906/Y (NAND3X1)                                  0.051004   2.577641 r
+  U56940/Y (NOR2X1)                                   0.036466   2.614107 f
+  U56941/Y (NOR3X1)                                   0.038050   2.652157 r
+  U56942/Y (NOR2X1)                                   0.021262   2.673419 f
+  tile11/u_systolic_pe_matrix/pe01/u_mac/exception_flags_reg[4]/D (DFFPOSX1)
+                                                      0.000000   2.673419 f
+  data arrival time                                              2.673419
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  tile11/u_systolic_pe_matrix/pe01/u_mac/exception_flags_reg[4]/CLK (DFFPOSX1)
+                                                      0.000000   9.900000 r
+  library setup time                                  -1.372669  8.527331
+  data required time                                             8.527331
+  --------------------------------------------------------------------------
+  data required time                                             8.527331
+  data arrival time                                              -2.673419
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.853913
+
+
+  Startpoint: tile11/u_systolic_pe_matrix/pe20/u_mac/out_reg[1]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: tile11/u_systolic_pe_matrix/pe20/u_mac/out_reg[6]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  tile11/u_systolic_pe_matrix/pe20/u_mac/out_reg[1]/CLK (DFFPOSX1)
+                                                      0.000000 # 0.000000 r
+  tile11/u_systolic_pe_matrix/pe20/u_mac/out_reg[1]/Q (DFFPOSX1) <-
+                                                      0.113274   0.113274 f
+  U43391/Y (INVX1)                                    0.028277   0.141550 r
+  U43392/Y (AOI21X1)                                  0.025417   0.166967 f
+  U43393/Y (AOI22X1)                                  0.027261   0.194228 r
+  U34586/Y (BUFX2)                                    0.040309   0.234537 r
+  U34587/Y (OR2X1)                                    0.040763   0.275300 r
+  U43395/Y (AOI22X1)                                  0.020108   0.295407 f
+  U43396/Y (AOI22X1)                                  0.035634   0.331041 r
+  U43399/Y (OAI21X1)                                  0.025340   0.356381 f
+  U43401/Y (OAI21X1)                                  0.038743   0.395124 r
+  U43402/Y (NAND2X1)                                  0.021633   0.416757 f
+  U43403/Y (NAND2X1)                                  0.013212   0.429970 r
+  U43404/Y (BUFX2)                                    0.101840   0.531809 r
+  U43414/Y (AOI21X1)                                  0.047242   0.579051 f
+  U32841/Y (BUFX2)                                    0.042728   0.621780 f
+  U43415/Y (NAND2X1)                                  0.033567   0.655346 r
+  U43416/Y (MUX2X1)                                   0.069307   0.724653 f
+  U43429/Y (AOI21X1)                                  0.041147   0.765800 r
+  U36643/Y (BUFX2)                                    0.068016   0.833817 r
+  U43440/Y (INVX1)                                    0.044160   0.877977 f
+  U43449/Y (NOR2X1)                                   0.043801   0.921778 r
+  U43450/Y (XOR2X1)                                   0.042307   0.964085 f
+  U43451/Y (AND2X1)                                   0.059064   1.023149 f
+  U43452/Y (AND2X1)                                   0.055072   1.078221 f
+  U43453/Y (AND2X1)                                   0.055302   1.133523 f
+  U43454/Y (AND2X1)                                   0.055289   1.188812 f
+  U43455/Y (AND2X1)                                   0.055781   1.244592 f
+  DP_OP_1512J1_275_4713/U6/YC (FAX1)                  0.081594   1.326186 f
+  DP_OP_1512J1_275_4713/U5/YC (FAX1)                  0.081469   1.407655 f
+  DP_OP_1512J1_275_4713/U4/YC (FAX1)                  0.081469   1.489123 f
+  DP_OP_1512J1_275_4713/U3/YC (FAX1)                  0.081060   1.570184 f
+  U55133/Y (XNOR2X1)                                  0.130557   1.700740 r
+  U33227/Y (OR2X1)                                    0.061667   1.762407 r
+  U33228/Y (INVX1)                                    0.036772   1.799179 f
+  U36701/Y (AND2X1)                                   0.052865   1.852044 f
+  U36702/Y (INVX1)                                    0.076472   1.928515 r
+  U33244/Y (OR2X1)                                    0.113553   2.042068 r
+  U33243/Y (INVX1)                                    0.069479   2.111547 f
+  U55240/Y (MUX2X1)                                   0.045778   2.157326 r
+  U36812/Y (OR2X1)                                    0.048798   2.206124 r
+  U55241/Y (INVX1)                                    0.017535   2.223659 f
+  U55242/Y (NAND2X1)                                  0.012965   2.236624 r
+  U33690/Y (AND2X1)                                   0.047113   2.283737 r
+  U55243/Y (INVX1)                                    0.033502   2.317239 f
+  U55248/Y (NAND2X1)                                  0.039569   2.356808 r
+  U35275/Y (OR2X1)                                    0.049078   2.405887 r
+  U35276/Y (INVX1)                                    0.028028   2.433915 f
+  U55249/Y (NAND2X1)                                  0.032667   2.466582 r
+  U55250/Y (NOR2X1)                                   0.033947   2.500529 f
+  U55251/Y (OR2X1)                                    0.047023   2.547552 f
+  U55252/Y (NAND3X1)                                  0.050975   2.598526 r
+  U55287/Y (NOR2X1)                                   0.036458   2.634985 f
+  U55366/Y (NOR2X1)                                   0.048836   2.683820 r
+  U55377/Y (AOI21X1)                                  0.025002   2.708822 f
+  tile11/u_systolic_pe_matrix/pe20/u_mac/out_reg[6]/D (DFFPOSX1)
+                                                      0.000000   2.708822 f
+  data arrival time                                              2.708822
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  tile11/u_systolic_pe_matrix/pe20/u_mac/out_reg[6]/CLK (DFFPOSX1)
+                                                      0.000000   9.900000 r
+  library setup time                                  -1.335616  8.564384
+  data required time                                             8.564384
+  --------------------------------------------------------------------------
+  data required time                                             8.564384
+  data arrival time                                              -2.708822
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.855562
+
+
+  Startpoint: tile11/u_systolic_pe_matrix/pe03/u_mac/out_reg[1]
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: tile11/u_systolic_pe_matrix/pe03/u_mac/exception_flags_reg[4]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000000   0.000000
+  clock network delay (ideal)                         0.000000   0.000000
+  tile11/u_systolic_pe_matrix/pe03/u_mac/out_reg[1]/CLK (DFFPOSX1)
+                                                      0.000000 # 0.000000 r
+  tile11/u_systolic_pe_matrix/pe03/u_mac/out_reg[1]/Q (DFFPOSX1) <-
+                                                      0.116008   0.116008 f
+  U46671/Y (INVX1)                                    0.020401   0.136409 r
+  U46672/Y (AOI21X1)                                  0.022917   0.159326 f
+  U46673/Y (AOI22X1)                                  0.027304   0.186630 r
+  U34596/Y (BUFX2)                                    0.040295   0.226925 r
+  U34597/Y (OR2X1)                                    0.040763   0.267687 r
+  U46675/Y (AOI22X1)                                  0.020108   0.287795 f
+  U46676/Y (AOI22X1)                                  0.035634   0.323429 r
+  U46679/Y (OAI21X1)                                  0.025297   0.348726 f
+  U46681/Y (OAI21X1)                                  0.038740   0.387467 r
+  U46682/Y (NAND2X1)                                  0.021638   0.409104 f
+  U46683/Y (NAND2X1)                                  0.013211   0.422316 r
+  U46684/Y (BUFX2)                                    0.101840   0.524155 r
+  U46693/Y (NOR2X1)                                   0.040008   0.564163 f
+  U46694/Y (AOI21X1)                                  0.015144   0.579307 r
+  U32930/Y (BUFX2)                                    0.032851   0.612158 r
+  U32928/Y (INVX1)                                    0.013215   0.625373 f
+  U32929/Y (INVX1)                                    0.032762   0.658135 r
+  U46695/Y (NAND2X1)                                  0.018761   0.676897 f
+  U46696/Y (MUX2X1)                                   0.066133   0.743030 f
+  U46709/Y (AOI21X1)                                  0.041147   0.784177 r
+  U36648/Y (BUFX2)                                    0.068016   0.852193 r
+  U46720/Y (INVX1)                                    0.039460   0.891654 f
+  U46727/Y (NOR2X1)                                   0.042336   0.933990 r
+  U46728/Y (XOR2X1)                                   0.070752   1.004741 r
+  U46729/Y (AND2X1)                                   0.047126   1.051867 r
+  U46730/Y (AND2X1)                                   0.056343   1.108210 r
+  U46731/Y (AND2X1)                                   0.056422   1.164632 r
+  U46732/Y (AND2X1)                                   0.056409   1.221041 r
+  U46733/Y (AND2X1)                                   0.057893   1.278934 r
+  DP_OP_1712J1_290_8557/U6/YC (FAX1)                  0.074326   1.353260 r
+  DP_OP_1712J1_290_8557/U5/YC (FAX1)                  0.073510   1.426770 r
+  DP_OP_1712J1_290_8557/U4/YC (FAX1)                  0.073510   1.500280 r
+  DP_OP_1712J1_290_8557/U3/YC (FAX1)                  0.071059   1.571339 r
+  U56258/Y (XNOR2X1)                                  0.142327   1.713666 r
+  U33002/Y (OR2X1)                                    0.056132   1.769799 r
+  U33003/Y (INVX1)                                    0.015657   1.785455 f
+  U33000/Y (INVX1)                                    -0.001572  1.783883 r
+  U33001/Y (INVX1)                                    0.031259   1.815142 f
+  U36493/Y (AND2X1)                                   0.067729   1.882871 f
+  U36494/Y (INVX1)                                    0.064496   1.947367 r
+  U56259/Y (NOR2X1)                                   0.024941   1.972309 f
+  U56260/Y (BUFX2)                                    0.049337   2.021646 f
+  U35683/Y (AND2X1)                                   0.056555   2.078201 f
+  U35684/Y (INVX1)                                    0.041010   2.119211 r
+  U56351/Y (NAND2X1)                                  0.023080   2.142291 f
+  U56375/Y (OAI21X1)                                  0.043767   2.186058 r
+  U36814/Y (OR2X1)                                    0.051161   2.237219 r
+  U34841/Y (AND2X1)                                   0.048293   2.285512 r
+  U56379/Y (AOI21X1)                                  0.030722   2.316235 f
+  U34840/Y (BUFX2)                                    0.038318   2.354553 f
+  U56380/Y (NAND2X1)                                  0.021058   2.375611 r
+  U56381/Y (NOR2X1)                                   0.032266   2.407877 f
+  U56382/Y (NAND2X1)                                  0.029983   2.437859 r
+  U56383/Y (NOR2X1)                                   0.034100   2.471959 f
+  U56384/Y (OR2X1)                                    0.047024   2.518983 f
+  U56385/Y (NAND3X1)                                  0.051004   2.569987 r
+  U56419/Y (NOR2X1)                                   0.036466   2.606453 f
+  U56420/Y (NOR3X1)                                   0.038050   2.644503 r
+  U56421/Y (NOR2X1)                                   0.021235   2.665738 f
+  tile11/u_systolic_pe_matrix/pe03/u_mac/exception_flags_reg[4]/D (DFFPOSX1)
+                                                      0.000000   2.665738 f
+  data arrival time                                              2.665738
+
+  clock core_clk (rise edge)                          10.000000  10.000000
+  clock network delay (ideal)                         0.000000   10.000000
+  clock uncertainty                                   -0.100000  9.900000
+  tile11/u_systolic_pe_matrix/pe03/u_mac/exception_flags_reg[4]/CLK (DFFPOSX1)
+                                                      0.000000   9.900000 r
+  library setup time                                  -1.372669  8.527331
+  data required time                                             8.527331
+  --------------------------------------------------------------------------
+  data required time                                             8.527331
+  data arrival time                                              -2.665738
+  --------------------------------------------------------------------------
+  slack (MET)                                                    5.861593
+
+
+1

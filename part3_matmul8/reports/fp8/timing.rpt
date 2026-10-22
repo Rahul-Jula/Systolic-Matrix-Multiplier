@@ -1,0 +1,536 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : matmul_8x8
+Version: V-2023.12-SP5-1
+Date   : Wed Oct 21 19:30:08 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile11/u_systolic_pe_matrix/pe03/u_mac/out_reg[1]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U56468/Y (NAND3X1)                                            0.150050  0.114185   6.405390 f
+  n44979 (net)                                  4     0.009513            0.000000   6.405390 f
+  U56475/Y (OR2X1)                                              0.012098  0.050066   6.455456 f
+  n44961 (net)                                  1     0.001924            0.000000   6.455456 f
+  U56476/Y (OAI21X1)                                            0.022983  0.017854   6.473310 r
+  tile11/u_systolic_pe_matrix/pe03/u_mac/N9 (net)
+                                                1     0.001816            0.000000   6.473310 r
+  tile11/u_systolic_pe_matrix/pe03/u_mac/out_reg[1]/D (DFFPOSX1)
+                                                                0.022983  0.000000   6.473310 r
+  data arrival time                                                                  6.473310
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile11/u_systolic_pe_matrix/pe03/u_mac/out_reg[1]/CLK (DFFPOSX1)        0.000000   9.900000 r
+  library setup time                                                      -1.312608  8.587392
+  data required time                                                                 8.587392
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.587392
+  data arrival time                                                                  -6.473310
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.114082
+
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile11/u_systolic_pe_matrix/pe00/u_mac/out_reg[1]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U57255/Y (NAND3X1)                                            0.150050  0.114185   6.405390 f
+  n45819 (net)                                  4     0.009513            0.000000   6.405390 f
+  U57262/Y (OR2X1)                                              0.012096  0.050066   6.455456 f
+  n45801 (net)                                  1     0.001924            0.000000   6.455456 f
+  U57263/Y (OAI21X1)                                            0.022983  0.017853   6.473309 r
+  tile11/u_systolic_pe_matrix/pe00/u_mac/N9 (net)
+                                                1     0.001816            0.000000   6.473309 r
+  tile11/u_systolic_pe_matrix/pe00/u_mac/out_reg[1]/D (DFFPOSX1)
+                                                                0.022983  0.000000   6.473309 r
+  data arrival time                                                                  6.473309
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile11/u_systolic_pe_matrix/pe00/u_mac/out_reg[1]/CLK (DFFPOSX1)        0.000000   9.900000 r
+  library setup time                                                      -1.312608  8.587392
+  data required time                                                                 8.587392
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.587392
+  data arrival time                                                                  -6.473309
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.114083
+
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile00/u_systolic_pe_matrix/pe03/u_mac/out_reg[0]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U66516/Y (NAND3X1)                                            0.150050  0.114185   6.405390 f
+  n56201 (net)                                  4     0.009513            0.000000   6.405390 f
+  U66518/Y (OR2X1)                                              0.011685  0.050066   6.455456 f
+  n56176 (net)                                  1     0.001924            0.000000   6.455456 f
+  U66519/Y (OAI21X1)                                            0.022983  0.017715   6.473171 r
+  tile00/u_systolic_pe_matrix/pe03/u_mac/N8 (net)
+                                                1     0.001816            0.000000   6.473171 r
+  tile00/u_systolic_pe_matrix/pe03/u_mac/out_reg[0]/D (DFFPOSX1)
+                                                                0.022983  0.000000   6.473171 r
+  data arrival time                                                                  6.473171
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile00/u_systolic_pe_matrix/pe03/u_mac/out_reg[0]/CLK (DFFPOSX1)        0.000000   9.900000 r
+  library setup time                                                      -1.312608  8.587392
+  data required time                                                                 8.587392
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.587392
+  data arrival time                                                                  -6.473171
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.114221
+
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile00/u_systolic_pe_matrix/pe12/u_mac/out_reg[3]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U66255/Y (NAND3X1)                                            0.150050  0.114185   6.405390 f
+  n55846 (net)                                  4     0.009513            0.000000   6.405390 f
+  U66273/Y (OAI21X1)                                            0.026890  0.072013   6.477404 r
+  tile00/u_systolic_pe_matrix/pe12/u_mac/N11 (net)
+                                                1     0.001816            0.000000   6.477404 r
+  tile00/u_systolic_pe_matrix/pe12/u_mac/out_reg[3]/D (DFFPOSX1)
+                                                                0.026890  0.000000   6.477404 r
+  data arrival time                                                                  6.477404
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile00/u_systolic_pe_matrix/pe12/u_mac/out_reg[3]/CLK (DFFPOSX1)        0.000000   9.900000 r
+  library setup time                                                      -1.291381  8.608619
+  data required time                                                                 8.608619
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.608619
+  data arrival time                                                                  -6.477404
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.131215
+
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile00/u_systolic_pe_matrix/pe11/u_mac/out_reg[3]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U66338/Y (NAND3X1)                                            0.150050  0.114185   6.405390 f
+  n55966 (net)                                  4     0.009513            0.000000   6.405390 f
+  U66356/Y (OAI21X1)                                            0.026890  0.072013   6.477404 r
+  tile00/u_systolic_pe_matrix/pe11/u_mac/N11 (net)
+                                                1     0.001816            0.000000   6.477404 r
+  tile00/u_systolic_pe_matrix/pe11/u_mac/out_reg[3]/D (DFFPOSX1)
+                                                                0.026890  0.000000   6.477404 r
+  data arrival time                                                                  6.477404
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile00/u_systolic_pe_matrix/pe11/u_mac/out_reg[3]/CLK (DFFPOSX1)        0.000000   9.900000 r
+  library setup time                                                      -1.291381  8.608619
+  data required time                                                                 8.608619
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.608619
+  data arrival time                                                                  -6.477404
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.131215
+
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile11/u_systolic_pe_matrix/pe32/u_mac/mult_reg[7]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U53965/Y (NAND3X1)                                            0.135402  0.101958   6.393163 f
+  n42178 (net)                                  1     0.002312            0.000000   6.393163 f
+  U53966/Y (AOI21X1)                                            0.025059  0.050990   6.444153 r
+  tile11/u_systolic_pe_matrix/pe32/u_mac/N39 (net)
+                                                1     0.001816            0.000000   6.444153 r
+  tile11/u_systolic_pe_matrix/pe32/u_mac/mult_reg[7]/D (DFFPOSX1)
+                                                                0.025059  0.000000   6.444153 r
+  data arrival time                                                                  6.444153
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile11/u_systolic_pe_matrix/pe32/u_mac/mult_reg[7]/CLK (DFFPOSX1)       0.000000   9.900000 r
+  library setup time                                                      -1.301326  8.598673
+  data required time                                                                 8.598673
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.598673
+  data arrival time                                                                  -6.444153
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.154520
+
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile11/u_systolic_pe_matrix/pe23/u_mac/mult_reg[7]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U54551/Y (NAND3X1)                                            0.135402  0.101958   6.393163 f
+  n42854 (net)                                  1     0.002312            0.000000   6.393163 f
+  U54552/Y (AOI21X1)                                            0.025059  0.050990   6.444153 r
+  tile11/u_systolic_pe_matrix/pe23/u_mac/N39 (net)
+                                                1     0.001816            0.000000   6.444153 r
+  tile11/u_systolic_pe_matrix/pe23/u_mac/mult_reg[7]/D (DFFPOSX1)
+                                                                0.025059  0.000000   6.444153 r
+  data arrival time                                                                  6.444153
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile11/u_systolic_pe_matrix/pe23/u_mac/mult_reg[7]/CLK (DFFPOSX1)       0.000000   9.900000 r
+  library setup time                                                      -1.301326  8.598673
+  data required time                                                                 8.598673
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.598673
+  data arrival time                                                                  -6.444153
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.154520
+
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile10/u_systolic_pe_matrix/pe31/u_mac/mult_reg[7]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U58002/Y (NAND3X1)                                            0.135402  0.101958   6.393163 f
+  n46617 (net)                                  1     0.002312            0.000000   6.393163 f
+  U58003/Y (AOI21X1)                                            0.025103  0.050990   6.444153 r
+  tile10/u_systolic_pe_matrix/pe31/u_mac/N39 (net)
+                                                1     0.001816            0.000000   6.444153 r
+  tile10/u_systolic_pe_matrix/pe31/u_mac/mult_reg[7]/D (DFFPOSX1)
+                                                                0.025103  0.000000   6.444153 r
+  data arrival time                                                                  6.444153
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile10/u_systolic_pe_matrix/pe31/u_mac/mult_reg[7]/CLK (DFFPOSX1)       0.000000   9.900000 r
+  library setup time                                                      -1.301090  8.598909
+  data required time                                                                 8.598909
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.598909
+  data arrival time                                                                  -6.444153
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.154757
+
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile10/u_systolic_pe_matrix/pe30/u_mac/mult_reg[7]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U58259/Y (NAND3X1)                                            0.135402  0.101958   6.393163 f
+  n46899 (net)                                  1     0.002312            0.000000   6.393163 f
+  U58260/Y (AOI21X1)                                            0.025103  0.050990   6.444153 r
+  tile10/u_systolic_pe_matrix/pe30/u_mac/N39 (net)
+                                                1     0.001816            0.000000   6.444153 r
+  tile10/u_systolic_pe_matrix/pe30/u_mac/mult_reg[7]/D (DFFPOSX1)
+                                                                0.025103  0.000000   6.444153 r
+  data arrival time                                                                  6.444153
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile10/u_systolic_pe_matrix/pe30/u_mac/mult_reg[7]/CLK (DFFPOSX1)       0.000000   9.900000 r
+  library setup time                                                      -1.301090  8.598909
+  data required time                                                                 8.598909
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.598909
+  data arrival time                                                                  -6.444153
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.154757
+
+
+  Startpoint: pe_reset (input port clocked by core_clk)
+  Endpoint: tile00/u_systolic_pe_matrix/pe10/u_mac/mult_reg[7]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000000   0.000000
+  clock network delay (ideal)                                             0.000000   0.000000
+  input external delay                                                    1.000000   1.000000 f
+  pe_reset (in)                                                 0.100000  0.000000   1.000000 f
+  pe_reset (net)                                1     0.002247            0.000000   1.000000 f
+  U36885/Y (OR2X1)                                              0.189570  0.189810   1.189810 f
+  n29677 (net)                                 28     0.066510            0.000000   1.189810 f
+  U36886/Y (INVX1)                                              1.139004  0.811541   2.001351 r
+  n44386 (net)                                104     0.236093            0.000000   2.001351 r
+  U40611/Y (INVX1)                                              0.911956  0.710633   2.711984 f
+  n32064 (net)                                103     0.231996            0.000000   2.711984 f
+  U40612/Y (INVX1)                                              1.279642  1.025027   3.737011 r
+  n56701 (net)                                 92     0.238390            0.000000   3.737011 r
+  U40613/Y (INVX1)                                              0.950844  0.714341   4.451352 f
+  n32065 (net)                                 98     0.229595            0.000000   4.451352 f
+  U40614/Y (INVX1)                                              1.197019  0.962467   5.413819 r
+  n57386 (net)                                 94     0.215684            0.000000   5.413819 r
+  U40615/Y (INVX1)                                              0.496768  0.213012   5.626832 f
+  n32066 (net)                                  6     0.013510            0.000000   5.626832 f
+  U40616/Y (INVX1)                                              0.845593  0.664373   6.291205 r
+  n56446 (net)                                 70     0.165014            0.000000   6.291205 r
+  U66414/Y (NAND3X1)                                            0.135402  0.101958   6.393163 f
+  n56052 (net)                                  1     0.002312            0.000000   6.393163 f
+  U66415/Y (AOI21X1)                                            0.025103  0.050990   6.444153 r
+  tile00/u_systolic_pe_matrix/pe10/u_mac/N39 (net)
+                                                1     0.001816            0.000000   6.444153 r
+  tile00/u_systolic_pe_matrix/pe10/u_mac/mult_reg[7]/D (DFFPOSX1)
+                                                                0.025103  0.000000   6.444153 r
+  data arrival time                                                                  6.444153
+
+  clock core_clk (rise edge)                                              10.000000  10.000000
+  clock network delay (ideal)                                             0.000000   10.000000
+  clock uncertainty                                                       -0.100000  9.900000
+  tile00/u_systolic_pe_matrix/pe10/u_mac/mult_reg[7]/CLK (DFFPOSX1)       0.000000   9.900000 r
+  library setup time                                                      -1.301090  8.598909
+  data required time                                                                 8.598909
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 8.598909
+  data arrival time                                                                  -6.444153
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                        2.154757
+
+
+1

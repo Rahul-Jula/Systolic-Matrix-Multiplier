@@ -1,0 +1,379 @@
+test -d "/usr/local2/synopsys/verdi_2024.09/verdi_2024"
+vcs -full64 -sverilog -timescale=1ns/1ps -debug_access+all -kdb +incdir+tb +define+FSDB ../part1_fp8/rtl/fp8_round_pack.sv ../part1_fp8/rtl/fp8_adder.sv ../part1_fp8/rtl/fp8_multiplier.sv ../part2_matmul4/matmul.v rtl/matmul_8x8.sv rtl/matmul_with_ram_8x8.sv tb/tb_part3.sv -top tb_part3 -Mdir=build/csrc_fsdb -o build/simv_fsdb -l reports/compile_fsdb.log
+                         Chronologic VCS (TM)
+      Version W-2024.09-SP2-3_Full64 -- Wed Oct 21 19:32:52 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '../part1_fp8/rtl/fp8_round_pack.sv'
+Parsing design file '../part1_fp8/rtl/fp8_adder.sv'
+Parsing design file '../part1_fp8/rtl/fp8_multiplier.sv'
+Parsing design file '../part2_matmul4/matmul.v'
+Parsing design file 'rtl/matmul_8x8.sv'
+Parsing design file 'rtl/matmul_with_ram_8x8.sv'
+Parsing design file 'tb/tb_part3.sv'
+Parsing included file 'tb/cases.svh'.
+Back to file 'tb/tb_part3.sv'.
+Top Level Modules:
+       tb_part3
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+4 modules and 0 UDP read.
+recompiling module tb_part3
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory '/home/a26385_asu/Systolic-Matrix-Multiplier/part3_matmul8/build/csrc_fsdb'
+make[1]: Leaving directory '/home/a26385_asu/Systolic-Matrix-Multiplier/part3_matmul8/build/csrc_fsdb'
+make[1]: Entering directory '/home/a26385_asu/Systolic-Matrix-Multiplier/part3_matmul8/build/csrc_fsdb'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/a26385_asu/Systolic-Matrix-Multiplier/part3_matmul8/build/simv_fsdb ]; then chmod a-x /home/a26385_asu/Systolic-Matrix-Multiplier/part3_matmul8/build/simv_fsdb; fi
+g++  -o /home/a26385_asu/Systolic-Matrix-Multiplier/part3_matmul8/build/simv_fsdb      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_fsdb.daidir -Wl,-rpath=./simv_fsdb.daidir -Wl,-rpath=/usr/local2/synopsys/vcs_2024/vcs/W-2024.09-SP2-3/linux64/lib -L/usr/local2/synopsys/vcs_2024/vcs/W-2024.09-SP2-3/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _97231_archive_1.so _prev_archive_1.so _cuarc0.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -ldistsimclient -lsimprofile -luclinative /usr/local2/synopsys/vcs_2024/vcs/W-2024.09-SP2-3/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/local2/synopsys/vcs_2024/vcs/W-2024.09-SP2-3/linux64/lib/vcs_save_restore_new.o /usr/local2/synopsys/verdi_2024.09/verdi_2024/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+/home/a26385_asu/Systolic-Matrix-Multiplier/part3_matmul8/build/simv_fsdb up to date
+make[1]: Leaving directory '/home/a26385_asu/Systolic-Matrix-Multiplier/part3_matmul8/build/csrc_fsdb'
+CPU time: .386 seconds to compile + .213 seconds to elab + .180 seconds to link
+Verdi KDB elaboration done and the database successfully generated
+./build/simv_fsdb +CASE=1 -l reports/ones_sim.log
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2-3_Full64; Runtime version W-2024.09-SP2-3_Full64;  Oct 21 19:32 2026
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2-3, Linux x86_64/64bit, 06/23/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'build/ones.fsdb'
+*Verdi* : Begin traversing the scope (tb_part3), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+EVENT case=1 ACCEPTED_START t=291 ns cycle=15
+EVENT case=1 FIRST_RUN t=330 ns cycle=17
+EVENT case=1 RAM_READ t=370 ns core=2 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=390 ns core=3 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=410 ns core=4 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=430 ns core=5 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=450 ns core=6 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=470 ns core=7 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=490 ns core=8 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=510 ns core=9 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=530 ns core=10 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 RAM_READ t=550 ns core=11 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 RAM_READ t=570 ns core=12 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 RAM_READ t=590 ns core=13 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 LEGACY_DONE_IGNORED t=690 ns cycle=35 core=18
+EVENT case=1 CAPTURE t=850 ns cycle=43
+EVENT case=1 C_WRITE t=870 ns cycle=44 core=27 col=0 addr=0 data=6060606060606060
+EVENT case=1 C_WRITE t=890 ns cycle=45 core=28 col=1 addr=1 data=6060606060606060
+EVENT case=1 C_WRITE t=910 ns cycle=46 core=29 col=2 addr=2 data=6060606060606060
+EVENT case=1 C_WRITE t=930 ns cycle=47 core=30 col=3 addr=3 data=6060606060606060
+EVENT case=1 C_WRITE t=950 ns cycle=48 core=31 col=4 addr=4 data=6060606060606060
+EVENT case=1 C_WRITE t=970 ns cycle=49 core=32 col=5 addr=5 data=6060606060606060
+EVENT case=1 C_WRITE t=990 ns cycle=50 core=33 col=6 addr=6 data=6060606060606060
+EVENT case=1 C_WRITE t=1010 ns cycle=51 core=34 col=7 addr=7 data=6060606060606060
+EVENT case=1 DONE t=1040 ns cycle=52 start_to_final_write=36 first_run_through_final_write=35
+CHECK case=1 C_COLUMN[0]=6060606060606060
+CHECK case=1 C_COLUMN[1]=6060606060606060
+CHECK case=1 C_COLUMN[2]=6060606060606060
+CHECK case=1 C_COLUMN[3]=6060606060606060
+CHECK case=1 C_COLUMN[4]=6060606060606060
+CHECK case=1 C_COLUMN[5]=6060606060606060
+CHECK case=1 C_COLUMN[6]=6060606060606060
+CHECK case=1 C_COLUMN[7]=6060606060606060
+PASS case=1 checked=64 flags=00000
+PART3 SIMULATION PASS total_checked=64
+$finish called from file "tb/tb_part3.sv", line 191.
+$finish at simulation time      1280 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1280000 ps
+CPU Time:      0.190 seconds;       Data structure size:   0.4Mb
+Wed Oct 21 19:32:56 2026
+./build/simv_fsdb +CASE=2 -l reports/varied_sim.log
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2-3_Full64; Runtime version W-2024.09-SP2-3_Full64;  Oct 21 19:32 2026
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2-3, Linux x86_64/64bit, 06/23/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'build/varied.fsdb'
+*Verdi* : Begin traversing the scope (tb_part3), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+EVENT case=2 ACCEPTED_START t=291 ns cycle=15
+EVENT case=2 FIRST_RUN t=330 ns cycle=17
+EVENT case=2 RAM_READ t=370 ns core=2 valid=1010 A=b0203000/xxxxxxxx B=a0303000/xxxxxxxx
+EVENT case=2 RAM_READ t=390 ns core=3 valid=1010 A=303030b0/xxxxxxxx B=b030b020/xxxxxxxx
+EVENT case=2 RAM_READ t=410 ns core=4 valid=1010 A=a020a0b0/xxxxxxxx B=0030a030/xxxxxxxx
+EVENT case=2 RAM_READ t=430 ns core=5 valid=1010 A=b020a0a0/xxxxxxxx B=20b000a0/xxxxxxxx
+EVENT case=2 RAM_READ t=450 ns core=6 valid=1111 A=a0a0a030/30203020 B=b02000b0/b0002020
+EVENT case=2 RAM_READ t=470 ns core=7 valid=1111 A=20203000/b0300000 B=00b030a0/20b0b030
+EVENT case=2 RAM_READ t=490 ns core=8 valid=1111 A=a02030a0/30303030 B=20a03020/a0a02020
+EVENT case=2 RAM_READ t=510 ns core=9 valid=1111 A=0030b020/20a03020 B=20b03020/30b030a0
+EVENT case=2 RAM_READ t=530 ns core=10 valid=0101 A=xxxxxxxx/a0a02020 B=xxxxxxxx/00303000
+EVENT case=2 RAM_READ t=550 ns core=11 valid=0101 A=xxxxxxxx/0000a0a0 B=xxxxxxxx/a000a000
+EVENT case=2 RAM_READ t=570 ns core=12 valid=0101 A=xxxxxxxx/20b000b0 B=xxxxxxxx/30b0b030
+EVENT case=2 RAM_READ t=590 ns core=13 valid=0101 A=xxxxxxxx/3000a0a0 B=xxxxxxxx/000020b0
+EVENT case=2 LEGACY_DONE_IGNORED t=690 ns cycle=35 core=18
+EVENT case=2 CAPTURE t=850 ns cycle=43
+EVENT case=2 C_WRITE t=870 ns cycle=44 core=27 col=0 addr=101 data=383c0090203c10c2
+EVENT case=2 C_WRITE t=890 ns cycle=45 core=28 col=1 addr=106 data=48c0a0c0bc343438
+EVENT case=2 C_WRITE t=910 ns cycle=46 core=29 col=2 addr=111 data=b04a424600a034b4
+EVENT case=2 C_WRITE t=930 ns cycle=47 core=30 col=3 addr=116 data=40b8a8b4a810b490
+EVENT case=2 C_WRITE t=950 ns cycle=48 core=31 col=4 addr=121 data=a830300010284cc2
+EVENT case=2 C_WRITE t=970 ns cycle=49 core=32 col=5 addr=126 data=40904446c8a8ce3c
+EVENT case=2 C_WRITE t=990 ns cycle=50 core=33 col=6 addr=131 data=b0a0b02010c6bc4c
+EVENT case=2 C_WRITE t=1010 ns cycle=51 core=34 col=7 addr=136 data=b0c090b4002090b0
+EVENT case=2 DONE t=1040 ns cycle=52 start_to_final_write=36 first_run_through_final_write=35
+CHECK case=2 C_COLUMN[0]=383c0090203c10c2
+CHECK case=2 C_COLUMN[1]=48c0a0c0bc343438
+CHECK case=2 C_COLUMN[2]=b04a424600a034b4
+CHECK case=2 C_COLUMN[3]=40b8a8b4a810b490
+CHECK case=2 C_COLUMN[4]=a830300010284cc2
+CHECK case=2 C_COLUMN[5]=40904446c8a8ce3c
+CHECK case=2 C_COLUMN[6]=b0a0b02010c6bc4c
+CHECK case=2 C_COLUMN[7]=b0c090b4002090b0
+PASS case=2 checked=64 flags=00000
+PART3 SIMULATION PASS total_checked=64
+$finish called from file "tb/tb_part3.sv", line 191.
+$finish at simulation time      1280 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1280000 ps
+CPU Time:      0.180 seconds;       Data structure size:   0.4Mb
+Wed Oct 21 19:32:57 2026
+./build/simv_fsdb +CASE=3 -l reports/exception_sim.log
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2-3_Full64; Runtime version W-2024.09-SP2-3_Full64;  Oct 21 19:32 2026
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2-3, Linux x86_64/64bit, 06/23/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'build/exception.fsdb'
+*Verdi* : Begin traversing the scope (tb_part3), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+EVENT case=3 ACCEPTED_START t=291 ns cycle=15
+EVENT case=3 FIRST_RUN t=330 ns cycle=17
+EVENT case=3 RAM_READ t=370 ns core=2 valid=1010 A=00000000/xxxxxxxx B=00000000/xxxxxxxx
+EVENT case=3 RAM_READ t=390 ns core=3 valid=1010 A=00000000/xxxxxxxx B=00000000/xxxxxxxx
+EVENT case=3 RAM_READ t=410 ns core=4 valid=1010 A=00000000/xxxxxxxx B=00000000/xxxxxxxx
+EVENT case=3 RAM_READ t=430 ns core=5 valid=1010 A=00000000/xxxxxxxx B=00000000/xxxxxxxx
+EVENT case=3 RAM_READ t=450 ns core=6 valid=1111 A=00000000/00000000 B=00000000/00000000
+EVENT case=3 RAM_READ t=470 ns core=7 valid=1111 A=00000000/00000000 B=00000000/00000000
+EVENT case=3 RAM_READ t=490 ns core=8 valid=1111 A=00000000/00000000 B=00000000/00000000
+EVENT case=3 RAM_READ t=510 ns core=9 valid=1111 A=00000000/00000000 B=00000000/00000000
+EVENT case=3 RAM_READ t=530 ns core=10 valid=0101 A=xxxxxxxx/00000000 B=xxxxxxxx/00000000
+EVENT case=3 RAM_READ t=550 ns core=11 valid=0101 A=xxxxxxxx/00000000 B=xxxxxxxx/00000000
+EVENT case=3 RAM_READ t=570 ns core=12 valid=0101 A=xxxxxxxx/00000000 B=xxxxxxxx/00000000
+EVENT case=3 RAM_READ t=590 ns core=13 valid=0101 A=xxxxxxxx/60000000 B=xxxxxxxx/40000000
+EVENT case=3 LEGACY_DONE_IGNORED t=690 ns cycle=35 core=18
+EVENT case=3 CAPTURE t=850 ns cycle=43
+EVENT case=3 C_WRITE t=870 ns cycle=44 core=27 col=0 addr=0 data=0000000000000000
+EVENT case=3 C_WRITE t=890 ns cycle=45 core=28 col=1 addr=1 data=0000000000000000
+EVENT case=3 C_WRITE t=910 ns cycle=46 core=29 col=2 addr=2 data=0000000000000000
+EVENT case=3 C_WRITE t=930 ns cycle=47 core=30 col=3 addr=3 data=0000000000000000
+EVENT case=3 C_WRITE t=950 ns cycle=48 core=31 col=4 addr=4 data=0000000000000000
+EVENT case=3 C_WRITE t=970 ns cycle=49 core=32 col=5 addr=5 data=0000000000000000
+EVENT case=3 C_WRITE t=990 ns cycle=50 core=33 col=6 addr=6 data=0000000000000000
+EVENT case=3 C_WRITE t=1010 ns cycle=51 core=34 col=7 addr=7 data=7000000000000000
+EVENT case=3 DONE t=1040 ns cycle=52 start_to_final_write=36 first_run_through_final_write=35
+CHECK case=3 C_COLUMN[0]=0000000000000000
+CHECK case=3 C_COLUMN[1]=0000000000000000
+CHECK case=3 C_COLUMN[2]=0000000000000000
+CHECK case=3 C_COLUMN[3]=0000000000000000
+CHECK case=3 C_COLUMN[4]=0000000000000000
+CHECK case=3 C_COLUMN[5]=0000000000000000
+CHECK case=3 C_COLUMN[6]=0000000000000000
+CHECK case=3 C_COLUMN[7]=7000000000000000
+PASS case=3 checked=64 flags=10001
+PART3 SIMULATION PASS total_checked=64
+$finish called from file "tb/tb_part3.sv", line 191.
+$finish at simulation time      1280 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1280000 ps
+CPU Time:      0.170 seconds;       Data structure size:   0.4Mb
+Wed Oct 21 19:32:58 2026
+./build/simv_fsdb -l reports/sequence_sim.log
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2-3_Full64; Runtime version W-2024.09-SP2-3_Full64;  Oct 21 19:32 2026
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2-3, Linux x86_64/64bit, 06/23/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'build/sequence.fsdb'
+*Verdi* : Begin traversing the scope (tb_part3), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+EVENT case=1 ACCEPTED_START t=291 ns cycle=15
+EVENT case=1 FIRST_RUN t=330 ns cycle=17
+EVENT case=1 RAM_READ t=370 ns core=2 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=390 ns core=3 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=410 ns core=4 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=430 ns core=5 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=450 ns core=6 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=470 ns core=7 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=490 ns core=8 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=510 ns core=9 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=530 ns core=10 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 RAM_READ t=550 ns core=11 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 RAM_READ t=570 ns core=12 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 RAM_READ t=590 ns core=13 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 LEGACY_DONE_IGNORED t=690 ns cycle=35 core=18
+EVENT case=1 CAPTURE t=850 ns cycle=43
+EVENT case=1 C_WRITE t=870 ns cycle=44 core=27 col=0 addr=0 data=6060606060606060
+EVENT case=1 C_WRITE t=890 ns cycle=45 core=28 col=1 addr=1 data=6060606060606060
+EVENT case=1 C_WRITE t=910 ns cycle=46 core=29 col=2 addr=2 data=6060606060606060
+EVENT case=1 C_WRITE t=930 ns cycle=47 core=30 col=3 addr=3 data=6060606060606060
+EVENT case=1 C_WRITE t=950 ns cycle=48 core=31 col=4 addr=4 data=6060606060606060
+EVENT case=1 C_WRITE t=970 ns cycle=49 core=32 col=5 addr=5 data=6060606060606060
+EVENT case=1 C_WRITE t=990 ns cycle=50 core=33 col=6 addr=6 data=6060606060606060
+EVENT case=1 C_WRITE t=1010 ns cycle=51 core=34 col=7 addr=7 data=6060606060606060
+EVENT case=1 DONE t=1040 ns cycle=52 start_to_final_write=36 first_run_through_final_write=35
+CHECK case=1 C_COLUMN[0]=6060606060606060
+CHECK case=1 C_COLUMN[1]=6060606060606060
+CHECK case=1 C_COLUMN[2]=6060606060606060
+CHECK case=1 C_COLUMN[3]=6060606060606060
+CHECK case=1 C_COLUMN[4]=6060606060606060
+CHECK case=1 C_COLUMN[5]=6060606060606060
+CHECK case=1 C_COLUMN[6]=6060606060606060
+CHECK case=1 C_COLUMN[7]=6060606060606060
+PASS case=1 checked=64 flags=00000
+EVENT case=2 ACCEPTED_START t=1511 ns cycle=76
+EVENT case=2 FIRST_RUN t=1550 ns cycle=78
+EVENT case=2 RAM_READ t=1590 ns core=2 valid=1010 A=b0203000/xxxxxxxx B=a0303000/xxxxxxxx
+EVENT case=2 RAM_READ t=1610 ns core=3 valid=1010 A=303030b0/xxxxxxxx B=b030b020/xxxxxxxx
+EVENT case=2 RAM_READ t=1630 ns core=4 valid=1010 A=a020a0b0/xxxxxxxx B=0030a030/xxxxxxxx
+EVENT case=2 RAM_READ t=1650 ns core=5 valid=1010 A=b020a0a0/xxxxxxxx B=20b000a0/xxxxxxxx
+EVENT case=2 RAM_READ t=1670 ns core=6 valid=1111 A=a0a0a030/30203020 B=b02000b0/b0002020
+EVENT case=2 RAM_READ t=1690 ns core=7 valid=1111 A=20203000/b0300000 B=00b030a0/20b0b030
+EVENT case=2 RAM_READ t=1710 ns core=8 valid=1111 A=a02030a0/30303030 B=20a03020/a0a02020
+EVENT case=2 RAM_READ t=1730 ns core=9 valid=1111 A=0030b020/20a03020 B=20b03020/30b030a0
+EVENT case=2 RAM_READ t=1750 ns core=10 valid=0101 A=xxxxxxxx/a0a02020 B=xxxxxxxx/00303000
+EVENT case=2 RAM_READ t=1770 ns core=11 valid=0101 A=xxxxxxxx/0000a0a0 B=xxxxxxxx/a000a000
+EVENT case=2 RAM_READ t=1790 ns core=12 valid=0101 A=xxxxxxxx/20b000b0 B=xxxxxxxx/30b0b030
+EVENT case=2 RAM_READ t=1810 ns core=13 valid=0101 A=xxxxxxxx/3000a0a0 B=xxxxxxxx/000020b0
+EVENT case=2 LEGACY_DONE_IGNORED t=1910 ns cycle=96 core=18
+EVENT case=2 CAPTURE t=2070 ns cycle=104
+EVENT case=2 C_WRITE t=2090 ns cycle=105 core=27 col=0 addr=101 data=383c0090203c10c2
+EVENT case=2 C_WRITE t=2110 ns cycle=106 core=28 col=1 addr=106 data=48c0a0c0bc343438
+EVENT case=2 C_WRITE t=2130 ns cycle=107 core=29 col=2 addr=111 data=b04a424600a034b4
+EVENT case=2 C_WRITE t=2150 ns cycle=108 core=30 col=3 addr=116 data=40b8a8b4a810b490
+EVENT case=2 C_WRITE t=2170 ns cycle=109 core=31 col=4 addr=121 data=a830300010284cc2
+EVENT case=2 C_WRITE t=2190 ns cycle=110 core=32 col=5 addr=126 data=40904446c8a8ce3c
+EVENT case=2 C_WRITE t=2210 ns cycle=111 core=33 col=6 addr=131 data=b0a0b02010c6bc4c
+EVENT case=2 C_WRITE t=2230 ns cycle=112 core=34 col=7 addr=136 data=b0c090b4002090b0
+EVENT case=2 DONE t=2260 ns cycle=113 start_to_final_write=36 first_run_through_final_write=35
+CHECK case=2 C_COLUMN[0]=383c0090203c10c2
+CHECK case=2 C_COLUMN[1]=48c0a0c0bc343438
+CHECK case=2 C_COLUMN[2]=b04a424600a034b4
+CHECK case=2 C_COLUMN[3]=40b8a8b4a810b490
+CHECK case=2 C_COLUMN[4]=a830300010284cc2
+CHECK case=2 C_COLUMN[5]=40904446c8a8ce3c
+CHECK case=2 C_COLUMN[6]=b0a0b02010c6bc4c
+CHECK case=2 C_COLUMN[7]=b0c090b4002090b0
+PASS case=2 checked=64 flags=00000
+EVENT case=3 ACCEPTED_START t=2731 ns cycle=137
+EVENT case=3 FIRST_RUN t=2770 ns cycle=139
+EVENT case=3 RAM_READ t=2810 ns core=2 valid=1010 A=00000000/xxxxxxxx B=00000000/xxxxxxxx
+EVENT case=3 RAM_READ t=2830 ns core=3 valid=1010 A=00000000/xxxxxxxx B=00000000/xxxxxxxx
+EVENT case=3 RAM_READ t=2850 ns core=4 valid=1010 A=00000000/xxxxxxxx B=00000000/xxxxxxxx
+EVENT case=3 RAM_READ t=2870 ns core=5 valid=1010 A=00000000/xxxxxxxx B=00000000/xxxxxxxx
+EVENT case=3 RAM_READ t=2890 ns core=6 valid=1111 A=00000000/00000000 B=00000000/00000000
+EVENT case=3 RAM_READ t=2910 ns core=7 valid=1111 A=00000000/00000000 B=00000000/00000000
+EVENT case=3 RAM_READ t=2930 ns core=8 valid=1111 A=00000000/00000000 B=00000000/00000000
+EVENT case=3 RAM_READ t=2950 ns core=9 valid=1111 A=00000000/00000000 B=00000000/00000000
+EVENT case=3 RAM_READ t=2970 ns core=10 valid=0101 A=xxxxxxxx/00000000 B=xxxxxxxx/00000000
+EVENT case=3 RAM_READ t=2990 ns core=11 valid=0101 A=xxxxxxxx/00000000 B=xxxxxxxx/00000000
+EVENT case=3 RAM_READ t=3010 ns core=12 valid=0101 A=xxxxxxxx/00000000 B=xxxxxxxx/00000000
+EVENT case=3 RAM_READ t=3030 ns core=13 valid=0101 A=xxxxxxxx/60000000 B=xxxxxxxx/40000000
+EVENT case=3 LEGACY_DONE_IGNORED t=3130 ns cycle=157 core=18
+EVENT case=3 CAPTURE t=3290 ns cycle=165
+EVENT case=3 C_WRITE t=3310 ns cycle=166 core=27 col=0 addr=0 data=0000000000000000
+EVENT case=3 C_WRITE t=3330 ns cycle=167 core=28 col=1 addr=1 data=0000000000000000
+EVENT case=3 C_WRITE t=3350 ns cycle=168 core=29 col=2 addr=2 data=0000000000000000
+EVENT case=3 C_WRITE t=3370 ns cycle=169 core=30 col=3 addr=3 data=0000000000000000
+EVENT case=3 C_WRITE t=3390 ns cycle=170 core=31 col=4 addr=4 data=0000000000000000
+EVENT case=3 C_WRITE t=3410 ns cycle=171 core=32 col=5 addr=5 data=0000000000000000
+EVENT case=3 C_WRITE t=3430 ns cycle=172 core=33 col=6 addr=6 data=0000000000000000
+EVENT case=3 C_WRITE t=3450 ns cycle=173 core=34 col=7 addr=7 data=7000000000000000
+EVENT case=3 DONE t=3480 ns cycle=174 start_to_final_write=36 first_run_through_final_write=35
+CHECK case=3 C_COLUMN[0]=0000000000000000
+CHECK case=3 C_COLUMN[1]=0000000000000000
+CHECK case=3 C_COLUMN[2]=0000000000000000
+CHECK case=3 C_COLUMN[3]=0000000000000000
+CHECK case=3 C_COLUMN[4]=0000000000000000
+CHECK case=3 C_COLUMN[5]=0000000000000000
+CHECK case=3 C_COLUMN[6]=0000000000000000
+CHECK case=3 C_COLUMN[7]=7000000000000000
+PASS case=3 checked=64 flags=10001
+EVENT case=1 ACCEPTED_START t=3951 ns cycle=198
+EVENT case=1 FIRST_RUN t=3990 ns cycle=200
+EVENT case=1 RAM_READ t=4030 ns core=2 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=4050 ns core=3 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=4070 ns core=4 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=4090 ns core=5 valid=1010 A=30303030/xxxxxxxx B=30303030/xxxxxxxx
+EVENT case=1 RAM_READ t=4110 ns core=6 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=4130 ns core=7 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=4150 ns core=8 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=4170 ns core=9 valid=1111 A=30303030/30303030 B=30303030/30303030
+EVENT case=1 RAM_READ t=4190 ns core=10 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 RAM_READ t=4210 ns core=11 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 RAM_READ t=4230 ns core=12 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 RAM_READ t=4250 ns core=13 valid=0101 A=xxxxxxxx/30303030 B=xxxxxxxx/30303030
+EVENT case=1 LEGACY_DONE_IGNORED t=4350 ns cycle=218 core=18
+EVENT case=1 CAPTURE t=4510 ns cycle=226
+EVENT case=1 C_WRITE t=4530 ns cycle=227 core=27 col=0 addr=101 data=6060606060606060
+EVENT case=1 C_WRITE t=4550 ns cycle=228 core=28 col=1 addr=106 data=6060606060606060
+EVENT case=1 C_WRITE t=4570 ns cycle=229 core=29 col=2 addr=111 data=6060606060606060
+EVENT case=1 C_WRITE t=4590 ns cycle=230 core=30 col=3 addr=116 data=6060606060606060
+EVENT case=1 C_WRITE t=4610 ns cycle=231 core=31 col=4 addr=121 data=6060606060606060
+EVENT case=1 C_WRITE t=4630 ns cycle=232 core=32 col=5 addr=126 data=6060606060606060
+EVENT case=1 C_WRITE t=4650 ns cycle=233 core=33 col=6 addr=131 data=6060606060606060
+EVENT case=1 C_WRITE t=4670 ns cycle=234 core=34 col=7 addr=136 data=6060606060606060
+EVENT case=1 DONE t=4700 ns cycle=235 start_to_final_write=36 first_run_through_final_write=35
+CHECK case=1 C_COLUMN[0]=6060606060606060
+CHECK case=1 C_COLUMN[1]=6060606060606060
+CHECK case=1 C_COLUMN[2]=6060606060606060
+CHECK case=1 C_COLUMN[3]=6060606060606060
+CHECK case=1 C_COLUMN[4]=6060606060606060
+CHECK case=1 C_COLUMN[5]=6060606060606060
+CHECK case=1 C_COLUMN[6]=6060606060606060
+CHECK case=1 C_COLUMN[7]=6060606060606060
+PASS case=1 checked=64 flags=00000
+PART3 SIMULATION PASS total_checked=256
+$finish called from file "tb/tb_part3.sv", line 191.
+$finish at simulation time      4940 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 4940000 ps
+CPU Time:      0.180 seconds;       Data structure size:   0.4Mb
+Wed Oct 21 19:32:59 2026
+grep -q 'PART3 SIMULATION PASS total_checked=256' reports/sequence_sim.log
+test -s build/ones.fsdb && test -s build/varied.fsdb && test -s build/exception.fsdb && test -s build/sequence.fsdb

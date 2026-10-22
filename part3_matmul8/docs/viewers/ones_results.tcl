@@ -1,0 +1,2 @@
+wvAddSignal -group {G1 {/tb_part3/done} -height 24 {/tb_part3/exception_flags[4:0]} -height 24 {/tb_part3/final_c[0][63:0]} -height 24 {/tb_part3/final_c[1][63:0]} -height 24 {/tb_part3/final_c[2][63:0]} -height 24 {/tb_part3/final_c[3][63:0]} -height 24 {/tb_part3/final_c[4][63:0]} -height 24 {/tb_part3/final_c[5][63:0]} -height 24 {/tb_part3/final_c[6][63:0]} -height 24 {/tb_part3/final_c[7][63:0]} -height 24 {/tb_part3/checked_entries[31:0]} -height 24}
+wvZoom 1200000 1280000

@@ -1,0 +1,2 @@
+wvAddSignal -group {G1 {/tb_part3/clk} -height 20 {/tb_part3/start} -height 20 {/tb_part3/internal_run} -height 20 {/tb_part3/c_write_valid} -height 20 {/tb_part3/c_write_addr[9:0]} -height 20 {/tb_part3/c_write_data[63:0]} -height 20 {/tb_part3/c_write_count[31:0]} -height 20 {/tb_part3/done} -height 20 {/tb_part3/exception_flags[4:0]} -height 20 {/tb_part3/checked_entries[31:0]} -height 20}
+wvZoom 820000 1080000

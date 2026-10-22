@@ -1,7 +1,7 @@
-Command: /home/a25953_asu/ADDV/LAB3/part2_matmul4/./build/simv_integer -l reports/integer_sim.log
+Command: /home/a26385_asu/Systolic-Matrix-Multiplier/part2_matmul4/./build/simv_integer -l reports/integer_sim.log
 Chronologic VCS simulator copyright 1991-2024
 Contains Synopsys proprietary information.
-Compiler version W-2024.09-SP2-3_Full64; Runtime version W-2024.09-SP2-3_Full64;  Oct 21 07:18 2026
+Compiler version W-2024.09-SP2-3_Full64; Runtime version W-2024.09-SP2-3_Full64;  Oct 22 05:01 2026
 EVENT case=0 LOAD t=80 ns addr=0 A=09050308 B=00030101
 EVENT case=0 LOAD t=100 ns addr=1 A=01020304 B=03040100
 EVENT case=0 LOAD t=120 ns addr=2 A=00010306 B=01030503
@@ -34,5 +34,5 @@ $finish called from file "tb/tb_part2.sv", line 142.
 $finish at simulation time       720 ns
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 720000 ps
-CPU Time:      0.130 seconds;       Data structure size:   0.1Mb
-Wed Oct 21 07:18:45 2026
+CPU Time:      0.160 seconds;       Data structure size:   0.1Mb
+Thu Oct 22 05:01:02 2026

@@ -1,0 +1,4 @@
+build/
+reports/*.log
+reports/fp8/dc.log
+__pycache__/
