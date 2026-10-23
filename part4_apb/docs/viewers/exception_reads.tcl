@@ -1,0 +1,2 @@
+wvAddSignal -group {G1 {/tb_part4/PCLK} -height 20 {/tb_part4/PSEL} -height 20 {/tb_part4/PENABLE} -height 20 {/tb_part4/PWRITE} -height 20 {/tb_part4/PREADY} -height 20 {/tb_part4/PADDR[9:0]} -height 20 {/tb_part4/PRDATA[15:0]} -height 20 {/tb_part4/done_reg} -height 20 {/tb_part4/flags_reg[4:0]} -height 20 {/tb_part4/last_apb_read_addr[9:0]} -height 20 {/tb_part4/last_apb_read_data[15:0]} -height 20}
+wvZoom 2390000 2620000

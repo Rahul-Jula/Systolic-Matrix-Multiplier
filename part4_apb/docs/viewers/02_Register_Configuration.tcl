@@ -1,0 +1,2 @@
+wvAddSignal -group {G1 {/tb_part4/PCLK} -height 20 {/tb_part4/start_pulse} -height 20 {/tb_part4/cfg_base_a[9:0]} -height 20 {/tb_part4/cfg_base_b[9:0]} -height 20 {/tb_part4/cfg_base_c[9:0]} -height 20 {/tb_part4/cfg_stride_a[7:0]} -height 20 {/tb_part4/cfg_stride_b[7:0]} -height 20 {/tb_part4/cfg_stride_c[7:0]} -height 20 {/tb_part4/engine_state[1:0]} -height 20 {/tb_part4/engine_busy} -height 20 {/tb_part4/core_run} -height 20 {/tb_part4/core_cycle[7:0]} -height 20}
+wvZoom 1700000 1910000

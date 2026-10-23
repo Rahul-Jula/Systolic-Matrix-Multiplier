@@ -1,0 +1,77 @@
+Command: /home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/./build/simv_fsdb +CASE=3 -l reports/exception_sim.log
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2-3_Full64; Runtime version W-2024.09-SP2-3_Full64;  Oct 23 00:04 2026
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2-3, Linux x86_64/64bit, 06/23/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'build/exception.fsdb'
+*Verdi* : Begin traversing the scope (tb_part4), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+APB READ  t=130 ns addr=000 data=0000
+APB READ  t=190 ns addr=002 data=0000
+APB READ  t=250 ns addr=004 data=0000
+APB READ  t=310 ns addr=006 data=0000
+APB READ  t=370 ns addr=008 data=0001
+APB READ  t=430 ns addr=00a data=0001
+APB READ  t=490 ns addr=00c data=0001
+APB READ  t=550 ns addr=00e data=0000
+APB READ  t=610 ns addr=010 data=0000
+APB WRITE t=1010 ns addr=002 data=0011
+APB WRITE t=1070 ns addr=004 data=002b
+APB WRITE t=1130 ns addr=006 data=0065
+APB WRITE t=1190 ns addr=008 data=0003
+APB WRITE t=1250 ns addr=00a data=0002
+APB WRITE t=1310 ns addr=00c data=0005
+APB READ  t=1370 ns addr=002 data=0011
+APB READ  t=1430 ns addr=004 data=002b
+APB READ  t=1490 ns addr=006 data=0065
+APB READ  t=1550 ns addr=008 data=0003
+APB READ  t=1610 ns addr=00a data=0002
+APB READ  t=1670 ns addr=00c data=0005
+APB WRITE t=1730 ns addr=000 data=0001
+EVENT START t=1731 ns
+APB WRITE t=1790 ns addr=002 data=0384
+APB WRITE t=1850 ns addr=004 data=0385
+APB WRITE t=1910 ns addr=006 data=0386
+APB WRITE t=1970 ns addr=008 data=0007
+APB WRITE t=2030 ns addr=00a data=0007
+APB WRITE t=2090 ns addr=00c data=0007
+APB WRITE t=2150 ns addr=000 data=0001
+APB WRITE t=2210 ns addr=000 data=0000
+APB READ  t=2270 ns addr=00e data=4000
+EVENT C_WRITE t=2310 ns column=0 addr=101 data=0000000000000000
+APB READ  t=2330 ns addr=00e data=4000
+EVENT C_WRITE t=2330 ns column=1 addr=106 data=0000000000000000
+EVENT C_WRITE t=2350 ns column=2 addr=111 data=0000000000000000
+EVENT C_WRITE t=2370 ns column=3 addr=116 data=0000000000000000
+APB READ  t=2390 ns addr=00e data=4000
+EVENT C_WRITE t=2390 ns column=4 addr=121 data=0000000000000000
+EVENT C_WRITE t=2410 ns column=5 addr=126 data=0000000000000000
+EVENT C_WRITE t=2430 ns column=6 addr=131 data=0000000000000000
+APB READ  t=2450 ns addr=00e data=4000
+EVENT C_WRITE t=2450 ns column=7 addr=136 data=7000000000000000
+APB READ  t=2510 ns addr=00e data=8000
+APB READ  t=2570 ns addr=010 data=0011
+EVENT DONE_READ t=2580 ns flags=0011
+APB READ  t=2630 ns addr=00e data=8000
+APB READ  t=2690 ns addr=010 data=0011
+CHECK case=3 C_COLUMN[0]=0000000000000000
+CHECK case=3 C_COLUMN[1]=0000000000000000
+CHECK case=3 C_COLUMN[2]=0000000000000000
+CHECK case=3 C_COLUMN[3]=0000000000000000
+CHECK case=3 C_COLUMN[4]=0000000000000000
+CHECK case=3 C_COLUMN[5]=0000000000000000
+CHECK case=3 C_COLUMN[6]=0000000000000000
+CHECK case=3 C_COLUMN[7]=7000000000000000
+PASS case=3 checked=64 flags=10001
+PART4 SIMULATION PASS total_checked=64 protocol_checks=17
+$finish called from file "tb/tb_part4.sv", line 200.
+$finish at simulation time      2871 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2871000 ps
+CPU Time:      0.180 seconds;       Data structure size:   0.4Mb
+Fri Oct 23 00:04:59 2026

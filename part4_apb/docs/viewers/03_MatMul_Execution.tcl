@@ -1,0 +1,2 @@
+wvAddSignal -group {G1 {/tb_part4/PCLK} -height 20 {/tb_part4/core_run} -height 20 {/tb_part4/core_cycle[7:0]} -height 20 {/tb_part4/core_flags[4:0]} -height 20 {/tb_part4/flags_reg[4:0]} -height 20 {/tb_part4/c_write_valid} -height 20 {/tb_part4/c_write_addr[9:0]} -height 20 {/tb_part4/c_write_data[63:0]} -height 20 {/tb_part4/c_write_count[31:0]} -height 20 {/tb_part4/done_reg} -height 20 {/tb_part4/engine_busy} -height 20}
+wvZoom 1930000 2570000

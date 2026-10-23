@@ -8,7 +8,7 @@ The lab handout is the requirements authority.
 | part1_fp8/ | Combinational e3m4 arithmetic, tests, documentation and report figures |
 | part2_matmul4/ | FP8 4x4 integration, self-checking matrix tests, waveform evidence and synthesis reports |
 | part3_matmul8/ | FP8 8x8 core, six-bank wrapper, verification, synthesis and actual Verdi captures |
-| part4_apb/ | Reserved for 16-bit APB CSR integration |
+| part4_apb/ | 16-bit APB control, register map, 320-result regression logs and waveform databases |
 | references/DSP48E1-FP/ | Archived handout-linked FP32 arithmetic sources |
 
 Start with part1_fp8/README.md. From Apporto:
@@ -27,3 +27,5 @@ Earlier Part II/III handoff: handoffs/LAB3_PART2_WAVES_AND_PART3_AI_HANDOFF.md.
 
 Part III: see part3_matmul8/README.md and part3_matmul8/IMPORT_NOTES.md.
 Part IV teammate: see handoffs/LAB3_PART4_COMPLETE_LAB_AI_HANDOFF.md.
+
+Part IV delivery: see part4_apb/README.md and part4_apb/IMPORT_NOTES.md for current supplied simulation evidence and capture status.

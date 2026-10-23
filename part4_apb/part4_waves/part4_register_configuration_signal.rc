@@ -1,0 +1,66 @@
+Magic 271485
+Revision Verdi_W-2024.09-SP2-3
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 1027 60 807 482 162 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/exception.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 2594716.954474
+cursor 1070000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 12
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/exception.fsdb"
+addSignal -h 20 /tb_part4/PCLK
+addSignal -h 20 -holdScope start_pulse
+addSignal -h 20 -UNSIGNED -HEX -holdScope cfg_base_a[9:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope cfg_base_b[9:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope cfg_base_c[9:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope cfg_stride_a[7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope cfg_stride_b[7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope cfg_stride_c[7:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope engine_state[1:0]
+addSignal -h 20 -holdScope engine_busy
+addSignal -h 20 -holdScope core_run
+addSignal -h 20 -UNSIGNED -HEX -holdScope core_cycle[7:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

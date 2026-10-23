@@ -1,0 +1,2 @@
+wvAddSignal -group {G1 {/tb_part4/PCLK} -height 20 {/tb_part4/PSEL} -height 20 {/tb_part4/PENABLE} -height 20 {/tb_part4/PWRITE} -height 20 {/tb_part4/PREADY} -height 20 {/tb_part4/PADDR[9:0]} -height 20 {/tb_part4/PRESETn} -height 20 {/tb_part4/PWDATA[15:0]} -height 20 {/tb_part4/start_pulse} -height 20 {/tb_part4/cfg_base_a[9:0]} -height 20 {/tb_part4/cfg_base_b[9:0]} -height 20 {/tb_part4/cfg_base_c[9:0]} -height 20 {/tb_part4/cfg_stride_a[7:0]} -height 20 {/tb_part4/cfg_stride_b[7:0]} -height 20 {/tb_part4/cfg_stride_c[7:0]} -height 20}
+wvZoom 980000 1790000

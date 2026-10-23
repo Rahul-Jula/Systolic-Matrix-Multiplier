@@ -1,0 +1,66 @@
+Command: vcs -full64 -sverilog -timescale=1ns/1ps -debug_access+all -kdb +incdir+tb \
+../part1_fp8/rtl/fp8_round_pack.sv ../part1_fp8/rtl/fp8_adder.sv ../part1_fp8/rtl/fp8_multiplier.sv \
+../part2_matmul4/matmul.v ../part3_matmul8/rtl/matmul_8x8.sv ../part3_matmul8/rtl/matmul_with_ram_8x8.sv \
+rtl/apb_matmul_control.sv rtl/matmul_apb_8x8.sv tb/tb_part4.sv -top tb_part4 -Mdir=build/csrc \
+-o build/simv -l reports/compile.log
+                         Chronologic VCS (TM)
+      Version W-2024.09-SP2-3_Full64 -- Thu Oct 22 23:59:15 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '../part1_fp8/rtl/fp8_round_pack.sv'
+Parsing design file '../part1_fp8/rtl/fp8_adder.sv'
+Parsing design file '../part1_fp8/rtl/fp8_multiplier.sv'
+Parsing design file '../part2_matmul4/matmul.v'
+Parsing design file '../part3_matmul8/rtl/matmul_8x8.sv'
+Parsing design file '../part3_matmul8/rtl/matmul_with_ram_8x8.sv'
+Parsing design file 'rtl/apb_matmul_control.sv'
+Parsing design file 'rtl/matmul_apb_8x8.sv'
+Parsing design file 'tb/tb_part4.sv'
+Parsing included file 'tb/cases.svh'.
+Back to file 'tb/tb_part4.sv'.
+Parsing included file 'tb/apb_tasks.svh'.
+Back to file 'tb/tb_part4.sv'.
+Top Level Modules:
+       tb_part4
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+4 modules and 0 UDP read.
+recompiling module tb_part4
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory '/home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x /home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/simv ]; \
+then chmod a-x /home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/simv; \
+fi
+g++  -o /home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/simv    \
+-rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/usr/local2/synopsys/vcs_2024/vcs/W-2024.09-SP2-3/linux64/lib \
+-L/usr/local2/synopsys/vcs_2024/vcs/W-2024.09-SP2-3/linux64/lib  -Wl,-rpath-link=./ \
+/usr/lib64/libnuma.so.1     _276714_archive_1.so _prev_archive_1.so _cuarc0.so   \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -ldistsimclient -lsimprofile -luclinative \
+/usr/local2/synopsys/vcs_2024/vcs/W-2024.09-SP2-3/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/local2/synopsys/vcs_2024/vcs/W-2024.09-SP2-3/linux64/lib/vcs_save_restore_new.o \
+/usr/local2/synopsys/verdi_2024.09/verdi_2024/share/PLI/VCS/LINUX64/pli.a -ldl  -lc \
+-lm -lpthread -ldl 
+/home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/simv up to date \
+
+make[1]: Leaving directory '/home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/csrc' \
+
+CPU time: .435 seconds to compile + .225 seconds to elab + .189 seconds to link
+Verdi KDB elaboration done and the database successfully generated

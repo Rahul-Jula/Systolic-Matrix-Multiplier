@@ -1,0 +1,296 @@
+Command: /home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/./build/simv_fsdb -l reports/sequence_sim.log
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2-3_Full64; Runtime version W-2024.09-SP2-3_Full64;  Oct 23 00:04 2026
+*Verdi* Loading libsscore_vcs202409.so
+FSDB Dumper for VCS, Release Verdi_W-2024.09-SP2-3, Linux x86_64/64bit, 06/23/2025
+(C) 1996 - 2025 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'build/sequence.fsdb'
+*Verdi* : Begin traversing the scope (tb_part4), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+APB READ  t=130 ns addr=000 data=0000
+APB READ  t=190 ns addr=002 data=0000
+APB READ  t=250 ns addr=004 data=0000
+APB READ  t=310 ns addr=006 data=0000
+APB READ  t=370 ns addr=008 data=0001
+APB READ  t=430 ns addr=00a data=0001
+APB READ  t=490 ns addr=00c data=0001
+APB READ  t=550 ns addr=00e data=0000
+APB READ  t=610 ns addr=010 data=0000
+APB WRITE t=790 ns addr=000 data=0000
+APB READ  t=850 ns addr=00e data=0000
+APB WRITE t=910 ns addr=00e data=ffff
+APB WRITE t=970 ns addr=010 data=ffff
+APB READ  t=1030 ns addr=00e data=0000
+APB READ  t=1090 ns addr=010 data=0000
+APB WRITE t=1150 ns addr=003 data=ffff
+APB WRITE t=1210 ns addr=202 data=ffff
+APB READ  t=1270 ns addr=003 data=0000
+APB READ  t=1330 ns addr=202 data=0000
+APB READ  t=1390 ns addr=002 data=0000
+APB WRITE t=1450 ns addr=002 data=ffff
+APB READ  t=1510 ns addr=002 data=03ff
+APB WRITE t=1570 ns addr=008 data=ffff
+APB READ  t=1630 ns addr=008 data=00ff
+APB PROTOCOL CHECKS PASS checks=21
+APB WRITE t=2210 ns addr=002 data=0000
+APB WRITE t=2270 ns addr=004 data=0000
+APB WRITE t=2330 ns addr=006 data=0000
+APB WRITE t=2390 ns addr=008 data=0001
+APB WRITE t=2450 ns addr=00a data=0001
+APB WRITE t=2510 ns addr=00c data=0001
+APB READ  t=2570 ns addr=002 data=0000
+APB READ  t=2630 ns addr=004 data=0000
+APB READ  t=2690 ns addr=006 data=0000
+APB READ  t=2750 ns addr=008 data=0001
+APB READ  t=2810 ns addr=00a data=0001
+APB READ  t=2870 ns addr=00c data=0001
+APB WRITE t=2930 ns addr=000 data=0001
+EVENT START t=2931 ns
+APB WRITE t=2990 ns addr=002 data=0384
+APB WRITE t=3050 ns addr=004 data=0385
+APB WRITE t=3110 ns addr=006 data=0386
+APB WRITE t=3170 ns addr=008 data=0007
+APB WRITE t=3230 ns addr=00a data=0007
+APB WRITE t=3290 ns addr=00c data=0007
+APB WRITE t=3350 ns addr=000 data=0001
+APB WRITE t=3410 ns addr=000 data=0000
+APB READ  t=3470 ns addr=00e data=4000
+EVENT C_WRITE t=3510 ns column=0 addr=0 data=6060606060606060
+APB READ  t=3530 ns addr=00e data=4000
+EVENT C_WRITE t=3530 ns column=1 addr=1 data=6060606060606060
+EVENT C_WRITE t=3550 ns column=2 addr=2 data=6060606060606060
+EVENT C_WRITE t=3570 ns column=3 addr=3 data=6060606060606060
+APB READ  t=3590 ns addr=00e data=4000
+EVENT C_WRITE t=3590 ns column=4 addr=4 data=6060606060606060
+EVENT C_WRITE t=3610 ns column=5 addr=5 data=6060606060606060
+EVENT C_WRITE t=3630 ns column=6 addr=6 data=6060606060606060
+APB READ  t=3650 ns addr=00e data=4000
+EVENT C_WRITE t=3650 ns column=7 addr=7 data=6060606060606060
+APB READ  t=3710 ns addr=00e data=8000
+APB READ  t=3770 ns addr=010 data=0000
+EVENT DONE_READ t=3780 ns flags=0000
+APB READ  t=3830 ns addr=00e data=8000
+APB READ  t=3890 ns addr=010 data=0000
+CHECK case=1 C_COLUMN[0]=6060606060606060
+CHECK case=1 C_COLUMN[1]=6060606060606060
+CHECK case=1 C_COLUMN[2]=6060606060606060
+CHECK case=1 C_COLUMN[3]=6060606060606060
+CHECK case=1 C_COLUMN[4]=6060606060606060
+CHECK case=1 C_COLUMN[5]=6060606060606060
+CHECK case=1 C_COLUMN[6]=6060606060606060
+CHECK case=1 C_COLUMN[7]=6060606060606060
+PASS case=1 checked=64 flags=00000
+APB WRITE t=4450 ns addr=002 data=0011
+APB WRITE t=4510 ns addr=004 data=002b
+APB WRITE t=4570 ns addr=006 data=0065
+APB WRITE t=4630 ns addr=008 data=0003
+APB WRITE t=4690 ns addr=00a data=0002
+APB WRITE t=4750 ns addr=00c data=0005
+APB READ  t=4810 ns addr=002 data=0011
+APB READ  t=4870 ns addr=004 data=002b
+APB READ  t=4930 ns addr=006 data=0065
+APB READ  t=4990 ns addr=008 data=0003
+APB READ  t=5050 ns addr=00a data=0002
+APB READ  t=5110 ns addr=00c data=0005
+APB WRITE t=5170 ns addr=000 data=0001
+EVENT START t=5171 ns
+APB WRITE t=5230 ns addr=002 data=0384
+APB WRITE t=5290 ns addr=004 data=0385
+APB WRITE t=5350 ns addr=006 data=0386
+APB WRITE t=5410 ns addr=008 data=0007
+APB WRITE t=5470 ns addr=00a data=0007
+APB WRITE t=5530 ns addr=00c data=0007
+APB WRITE t=5590 ns addr=000 data=0001
+APB WRITE t=5650 ns addr=000 data=0000
+APB READ  t=5710 ns addr=00e data=4000
+EVENT C_WRITE t=5750 ns column=0 addr=101 data=383c0090203c10c2
+APB READ  t=5770 ns addr=00e data=4000
+EVENT C_WRITE t=5770 ns column=1 addr=106 data=48c0a0c0bc343438
+EVENT C_WRITE t=5790 ns column=2 addr=111 data=b04a424600a034b4
+EVENT C_WRITE t=5810 ns column=3 addr=116 data=40b8a8b4a810b490
+APB READ  t=5830 ns addr=00e data=4000
+EVENT C_WRITE t=5830 ns column=4 addr=121 data=a830300010284cc2
+EVENT C_WRITE t=5850 ns column=5 addr=126 data=40904446c8a8ce3c
+EVENT C_WRITE t=5870 ns column=6 addr=131 data=b0a0b02010c6bc4c
+APB READ  t=5890 ns addr=00e data=4000
+EVENT C_WRITE t=5890 ns column=7 addr=136 data=b0c090b4002090b0
+APB READ  t=5950 ns addr=00e data=8000
+APB READ  t=6010 ns addr=010 data=0000
+EVENT DONE_READ t=6020 ns flags=0000
+APB READ  t=6070 ns addr=00e data=8000
+APB READ  t=6130 ns addr=010 data=0000
+CHECK case=2 C_COLUMN[0]=383c0090203c10c2
+CHECK case=2 C_COLUMN[1]=48c0a0c0bc343438
+CHECK case=2 C_COLUMN[2]=b04a424600a034b4
+CHECK case=2 C_COLUMN[3]=40b8a8b4a810b490
+CHECK case=2 C_COLUMN[4]=a830300010284cc2
+CHECK case=2 C_COLUMN[5]=40904446c8a8ce3c
+CHECK case=2 C_COLUMN[6]=b0a0b02010c6bc4c
+CHECK case=2 C_COLUMN[7]=b0c090b4002090b0
+PASS case=2 checked=64 flags=00000
+APB WRITE t=6690 ns addr=002 data=0011
+APB WRITE t=6750 ns addr=004 data=002b
+APB WRITE t=6810 ns addr=006 data=0065
+APB WRITE t=6870 ns addr=008 data=0003
+APB WRITE t=6930 ns addr=00a data=0002
+APB WRITE t=6990 ns addr=00c data=0005
+APB READ  t=7050 ns addr=002 data=0011
+APB READ  t=7110 ns addr=004 data=002b
+APB READ  t=7170 ns addr=006 data=0065
+APB READ  t=7230 ns addr=008 data=0003
+APB READ  t=7290 ns addr=00a data=0002
+APB READ  t=7350 ns addr=00c data=0005
+APB WRITE t=7410 ns addr=000 data=0001
+EVENT START t=7411 ns
+APB WRITE t=7470 ns addr=002 data=0384
+APB WRITE t=7530 ns addr=004 data=0385
+APB WRITE t=7590 ns addr=006 data=0386
+APB WRITE t=7650 ns addr=008 data=0007
+APB WRITE t=7710 ns addr=00a data=0007
+APB WRITE t=7770 ns addr=00c data=0007
+APB WRITE t=7830 ns addr=000 data=0001
+APB WRITE t=7890 ns addr=000 data=0000
+APB READ  t=7950 ns addr=00e data=4000
+EVENT C_WRITE t=7990 ns column=0 addr=101 data=0000000000000000
+APB READ  t=8010 ns addr=00e data=4000
+EVENT C_WRITE t=8010 ns column=1 addr=106 data=0000000000000000
+EVENT C_WRITE t=8030 ns column=2 addr=111 data=0000000000000000
+EVENT C_WRITE t=8050 ns column=3 addr=116 data=0000000000000000
+APB READ  t=8070 ns addr=00e data=4000
+EVENT C_WRITE t=8070 ns column=4 addr=121 data=0000000000000000
+EVENT C_WRITE t=8090 ns column=5 addr=126 data=0000000000000000
+EVENT C_WRITE t=8110 ns column=6 addr=131 data=0000000000000000
+APB READ  t=8130 ns addr=00e data=4000
+EVENT C_WRITE t=8130 ns column=7 addr=136 data=7000000000000000
+APB READ  t=8190 ns addr=00e data=8000
+APB READ  t=8250 ns addr=010 data=0011
+EVENT DONE_READ t=8260 ns flags=0011
+APB READ  t=8310 ns addr=00e data=8000
+APB READ  t=8370 ns addr=010 data=0011
+CHECK case=3 C_COLUMN[0]=0000000000000000
+CHECK case=3 C_COLUMN[1]=0000000000000000
+CHECK case=3 C_COLUMN[2]=0000000000000000
+CHECK case=3 C_COLUMN[3]=0000000000000000
+CHECK case=3 C_COLUMN[4]=0000000000000000
+CHECK case=3 C_COLUMN[5]=0000000000000000
+CHECK case=3 C_COLUMN[6]=0000000000000000
+CHECK case=3 C_COLUMN[7]=7000000000000000
+PASS case=3 checked=64 flags=10001
+APB WRITE t=8930 ns addr=002 data=0011
+APB WRITE t=8990 ns addr=004 data=002b
+APB WRITE t=9050 ns addr=006 data=0065
+APB WRITE t=9110 ns addr=008 data=0003
+APB WRITE t=9170 ns addr=00a data=0002
+APB WRITE t=9230 ns addr=00c data=0005
+APB READ  t=9290 ns addr=002 data=0011
+APB READ  t=9350 ns addr=004 data=002b
+APB READ  t=9410 ns addr=006 data=0065
+APB READ  t=9470 ns addr=008 data=0003
+APB READ  t=9530 ns addr=00a data=0002
+APB READ  t=9590 ns addr=00c data=0005
+APB WRITE t=9650 ns addr=000 data=0001
+EVENT START t=9651 ns
+APB WRITE t=9710 ns addr=002 data=0384
+APB WRITE t=9770 ns addr=004 data=0385
+APB WRITE t=9830 ns addr=006 data=0386
+APB WRITE t=9890 ns addr=008 data=0007
+APB WRITE t=9950 ns addr=00a data=0007
+APB WRITE t=10010 ns addr=00c data=0007
+APB WRITE t=10070 ns addr=000 data=0001
+APB WRITE t=10130 ns addr=000 data=0000
+APB READ  t=10190 ns addr=00e data=4000
+EVENT C_WRITE t=10230 ns column=0 addr=101 data=6060606060606060
+APB READ  t=10250 ns addr=00e data=4000
+EVENT C_WRITE t=10250 ns column=1 addr=106 data=6060606060606060
+EVENT C_WRITE t=10270 ns column=2 addr=111 data=6060606060606060
+EVENT C_WRITE t=10290 ns column=3 addr=116 data=6060606060606060
+APB READ  t=10310 ns addr=00e data=4000
+EVENT C_WRITE t=10310 ns column=4 addr=121 data=6060606060606060
+EVENT C_WRITE t=10330 ns column=5 addr=126 data=6060606060606060
+EVENT C_WRITE t=10350 ns column=6 addr=131 data=6060606060606060
+APB READ  t=10370 ns addr=00e data=4000
+EVENT C_WRITE t=10370 ns column=7 addr=136 data=6060606060606060
+APB READ  t=10430 ns addr=00e data=8000
+APB READ  t=10490 ns addr=010 data=0000
+EVENT DONE_READ t=10500 ns flags=0000
+APB READ  t=10550 ns addr=00e data=8000
+APB READ  t=10610 ns addr=010 data=0000
+CHECK case=1 C_COLUMN[0]=6060606060606060
+CHECK case=1 C_COLUMN[1]=6060606060606060
+CHECK case=1 C_COLUMN[2]=6060606060606060
+CHECK case=1 C_COLUMN[3]=6060606060606060
+CHECK case=1 C_COLUMN[4]=6060606060606060
+CHECK case=1 C_COLUMN[5]=6060606060606060
+CHECK case=1 C_COLUMN[6]=6060606060606060
+CHECK case=1 C_COLUMN[7]=6060606060606060
+PASS case=1 checked=64 flags=00000
+APB WRITE t=10830 ns addr=000 data=0001
+EVENT START t=10831 ns
+APB READ  t=11070 ns addr=000 data=0000
+APB READ  t=11130 ns addr=002 data=0000
+APB READ  t=11190 ns addr=004 data=0000
+APB READ  t=11250 ns addr=006 data=0000
+APB READ  t=11310 ns addr=008 data=0001
+APB READ  t=11370 ns addr=00a data=0001
+APB READ  t=11430 ns addr=00c data=0001
+APB READ  t=11490 ns addr=00e data=0000
+APB READ  t=11550 ns addr=010 data=0000
+APB WRITE t=12750 ns addr=002 data=0000
+APB WRITE t=12810 ns addr=004 data=0000
+APB WRITE t=12870 ns addr=006 data=0000
+APB WRITE t=12930 ns addr=008 data=0001
+APB WRITE t=12990 ns addr=00a data=0001
+APB WRITE t=13050 ns addr=00c data=0001
+APB READ  t=13110 ns addr=002 data=0000
+APB READ  t=13170 ns addr=004 data=0000
+APB READ  t=13230 ns addr=006 data=0000
+APB READ  t=13290 ns addr=008 data=0001
+APB READ  t=13350 ns addr=00a data=0001
+APB READ  t=13410 ns addr=00c data=0001
+APB WRITE t=13470 ns addr=000 data=0001
+EVENT START t=13471 ns
+APB WRITE t=13530 ns addr=002 data=0384
+APB WRITE t=13590 ns addr=004 data=0385
+APB WRITE t=13650 ns addr=006 data=0386
+APB WRITE t=13710 ns addr=008 data=0007
+APB WRITE t=13770 ns addr=00a data=0007
+APB WRITE t=13830 ns addr=00c data=0007
+APB WRITE t=13890 ns addr=000 data=0001
+APB WRITE t=13950 ns addr=000 data=0000
+APB READ  t=14010 ns addr=00e data=4000
+EVENT C_WRITE t=14050 ns column=0 addr=0 data=6060606060606060
+APB READ  t=14070 ns addr=00e data=4000
+EVENT C_WRITE t=14070 ns column=1 addr=1 data=6060606060606060
+EVENT C_WRITE t=14090 ns column=2 addr=2 data=6060606060606060
+EVENT C_WRITE t=14110 ns column=3 addr=3 data=6060606060606060
+APB READ  t=14130 ns addr=00e data=4000
+EVENT C_WRITE t=14130 ns column=4 addr=4 data=6060606060606060
+EVENT C_WRITE t=14150 ns column=5 addr=5 data=6060606060606060
+EVENT C_WRITE t=14170 ns column=6 addr=6 data=6060606060606060
+APB READ  t=14190 ns addr=00e data=4000
+EVENT C_WRITE t=14190 ns column=7 addr=7 data=6060606060606060
+APB READ  t=14250 ns addr=00e data=8000
+APB READ  t=14310 ns addr=010 data=0000
+EVENT DONE_READ t=14320 ns flags=0000
+APB READ  t=14370 ns addr=00e data=8000
+APB READ  t=14430 ns addr=010 data=0000
+CHECK case=1 C_COLUMN[0]=6060606060606060
+CHECK case=1 C_COLUMN[1]=6060606060606060
+CHECK case=1 C_COLUMN[2]=6060606060606060
+CHECK case=1 C_COLUMN[3]=6060606060606060
+CHECK case=1 C_COLUMN[4]=6060606060606060
+CHECK case=1 C_COLUMN[5]=6060606060606060
+CHECK case=1 C_COLUMN[6]=6060606060606060
+CHECK case=1 C_COLUMN[7]=6060606060606060
+PASS case=1 checked=64 flags=00000
+PART4 SIMULATION PASS total_checked=320 protocol_checks=70
+$finish called from file "tb/tb_part4.sv", line 200.
+$finish at simulation time     14611 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 14611000 ps
+CPU Time:      0.180 seconds;       Data structure size:   0.4Mb
+Fri Oct 23 00:05:00 2026

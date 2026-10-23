@@ -1,0 +1,65 @@
+Magic 271485
+Revision Verdi_W-2024.09-SP2-3
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 1027 528 806 482 162 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/exception.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 2899710.000000
+cursor 400000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 11
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/a25168_asu/addv/Systolic-Matrix-Multiplier/part4_apb/build/exception.fsdb"
+addSignal -h 20 /tb_part4/PCLK
+addSignal -h 20 -holdScope PSEL
+addSignal -h 20 -holdScope PENABLE
+addSignal -h 20 -holdScope PWRITE
+addSignal -h 20 -holdScope PREADY
+addSignal -h 20 -UNSIGNED -HEX -holdScope PADDR[9:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope PRDATA[15:0]
+addSignal -h 20 -holdScope done_reg
+addSignal -h 20 -UNSIGNED -HEX -holdScope flags_reg[4:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope last_apb_read_addr[9:0]
+addSignal -h 20 -UNSIGNED -HEX -holdScope last_apb_read_data[15:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+
